@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>O'quv dasturlari va to'garaklar — IBRAT SCHOOL</title>
-  <meta name="description" content="1–11-sinflar uchun dushanbadan shanbagacha (darslar 09:00 dan) xalqaro o'quv dasturi, matematika, IT, Cambridge ingliz tili hamda to'garaklar.">
+  <meta name="description" content="0–9-sinflar uchun dushanbadan shanbagacha (darslar 09:00 dan) xalqaro o'quv dasturi, matematika, IT, Cambridge ingliz tili hamda to'garaklar.">
   
   <link rel="icon" type="image/png" href="images/logo-square.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -103,79 +103,82 @@
         </div>
 
         <div class="tabs-header">
-          <button class="tab-btn active" data-tab="primaryTab">
-            <i class="fa-solid fa-shapes"></i> Boshlang'ich ta'lim (1–4-sinflar)
+          <button class="tab-btn active" data-tab="prepTab">
+            <i class="fa-solid fa-shapes"></i> 0-sinf: Maktabga tayyorlov
+          </button>
+          <button class="tab-btn" data-tab="primaryTab">
+            <i class="fa-solid fa-book-open"></i> Boshlang'ich ta'lim (1–4-sinflar)
           </button>
           <button class="tab-btn" data-tab="middleTab">
-            <i class="fa-solid fa-book-open-reader"></i> O'rta maktab (5–9-sinflar)
-          </button>
-          <button class="tab-btn" data-tab="highTab">
-            <i class="fa-solid fa-graduation-cap"></i> Yuqori sinflar (10–11-sinflar)
+            <i class="fa-solid fa-graduation-cap"></i> O'rta maktab (5–9-sinflar)
           </button>
         </div>
 
-        <!-- 1-tab -->
-        <div class="tab-pane active" id="primaryTab">
+        <!-- 1-tab: 0-sinf -->
+        <div class="tab-pane active" id="prepTab">
           <div class="tab-content-grid">
             <div class="tab-info">
-              <h3>Boshlang'ich ta'lim: Mustahkam poydevor</h3>
+              <span class="team-class-badge" style="background: rgba(16, 185, 129, 0.12); color: var(--success); margin-bottom: 12px;">5–6 yoshli bolalar uchun</span>
+              <h3>0-sinf: Maktabga tayyorlov guruhi</h3>
               <p>
-                Boshlang'ich sinflarda bolalarning ilmga bo'lgan muhabbatini uyg'otish, mantiqiy fikrlashni shakllantirish va o'rganish intizomini yaratishga qaratilgan dastur.
+                Maktab ostonasiga ilk qadam qo'yayotgan bolajonlarni maktab muhitiga mehr bilan moslashtirish, nutqini o'stirish, mantiqiy fikrlashini shakllantirish va o'qishga bo'lgan qiziqishini uyg'otishga qaratilgan maxsus dastur.
               </p>
               <ul class="tab-list">
-                <li><i class="fa-solid fa-check-circle"></i> Singapur matematikasi va mental arifmetika</li>
-                <li><i class="fa-solid fa-check-circle"></i> Qiziqarli interaktiv ingliz tili (Oxford Phonics)</li>
-                <li><i class="fa-solid fa-check-circle"></i> Chiroyli yozuv (husnixat) va kitobxonlik madaniyati</li>
-                <li><i class="fa-solid fa-check-circle"></i> Barcha uy vazifalarini maktabda o'qituvchi bilan bajarish</li>
+                <li><i class="fa-solid fa-check-circle"></i> Harf va tovushlar, ilk chiroyli yozuv (husnixat) asoslari</li>
+                <li><i class="fa-solid fa-check-circle"></i> Singapur metodikasi asosida interaktiv hisoblash va mantiq</li>
+                <li><i class="fa-solid fa-check-circle"></i> Oxford Phonics — qiziqarli o'yinlar orqali ilk ingliz tili</li>
+                <li><i class="fa-solid fa-check-circle"></i> 3 mahal sog'lom to'yimli taom, tibbiy nazorat va ijodiy to'garaklar</li>
+              </ul>
+              <button class="btn btn-primary open-admission-modal">0-sinfga ariza topshirish</button>
+            </div>
+            <div class="tab-image">
+              <img src="images/teachers/maftuna-rahmonova.jpg" alt="Maftuna Rahmonova — 0-sinf ustozi" style="max-height: 400px; object-fit: cover; border-radius: var(--radius-lg);">
+            </div>
+          </div>
+        </div>
+
+        <!-- 2-tab: 1-4-sinflar -->
+        <div class="tab-pane" id="primaryTab">
+          <div class="tab-content-grid">
+            <div class="tab-info">
+              <span class="team-class-badge" style="background: rgba(2, 132, 199, 0.12); color: var(--secondary); margin-bottom: 12px;">1–4-sinflar</span>
+              <h3>Boshlang'ich ta'lim: Mustahkam poydevor</h3>
+              <p>
+                Tajribali sinf rahbarlari (1-sinf: Zulxumor Djurayeva, 2-sinf: Shahnoza Shamsiddinova, 3-sinf: Zuhra Bektemirova, Hanifa Rahmatova va yordamchi ustoz Umriya Qahhorova) nazoratida har bir bolaning ilmga intilishini rivojlantiruvchi ta'lim.
+              </p>
+              <ul class="tab-list">
+                <li><i class="fa-solid fa-check-circle"></i> Singapur matematikasi, tahliliy masalalar va mental arifmetika</li>
+                <li><i class="fa-solid fa-check-circle"></i> Cambridge English darsliklari va audio-vizual mashg'ulotlar</li>
+                <li><i class="fa-solid fa-check-circle"></i> Husnixat, tez o'qish va kitobxonlik madaniyati</li>
+                <li><i class="fa-solid fa-check-circle"></i> Barcha uy vazifalarini maktabda o'qituvchilar bilan 100% bajarish</li>
               </ul>
               <button class="btn btn-primary open-admission-modal">Boshlang'ich sinfga ariza topshirish</button>
             </div>
             <div class="tab-image">
-              <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="Boshlang'ich sinf o'quvchilari">
+              <img src="images/teachers/zulxumor-djurayeva.jpg" alt="Boshlang'ich sinf darsi" style="max-height: 400px; object-fit: cover; border-radius: var(--radius-lg);">
             </div>
           </div>
         </div>
 
-        <!-- 2-tab -->
+        <!-- 3-tab: 5-9-sinflar -->
         <div class="tab-pane" id="middleTab">
           <div class="tab-content-grid">
             <div class="tab-info">
+              <span class="team-class-badge" style="background: rgba(217, 119, 6, 0.12); color: var(--accent); margin-bottom: 12px;">5–9-sinflar</span>
               <h3>O'rta maktab: Fanlarni chuqur o'zlashtirish</h3>
               <p>
-                5–9-sinflarda aniq va tabiiy fanlar chuqurlashtirilgan holda o'qitiladi. O'quvchilar laboratoriyalarda amaliy tajribalar o'tkazib, fanlarni hayot bilan bog'laydilar.
+                5–9-sinflarda aniq va tabiiy fanlar chuqurlashtirilgan holda o'qitiladi. Biologiya (Najmiddin Bektemirov), IT va Python dasturlash, Cambridge ingliz tili hamda sport (Shaxriyor Odilov) mashg'ulotlari olib boriladi.
               </p>
               <ul class="tab-list">
-                <li><i class="fa-solid fa-check-circle"></i> Chuqurlashtirilgan algebra, geometriya va mantiq</li>
-                <li><i class="fa-solid fa-check-circle"></i> Cambridge Lower Secondary xalqaro darsliklari</li>
-                <li><i class="fa-solid fa-check-circle"></i> Python dasturlash tili va IT loyihalari</li>
-                <li><i class="fa-solid fa-check-circle"></i> Fan olimpiadalariga professional tayyorgarlik</li>
+                <li><i class="fa-solid fa-check-circle"></i> Chuqurlashtirilgan algebra, geometriya va mantiqiy masalalar</li>
+                <li><i class="fa-solid fa-check-circle"></i> Zamonaviy biologiya, kimyo va fizika laboratoriyalari</li>
+                <li><i class="fa-solid fa-check-circle"></i> Cambridge Secondary ingliz tili va dastlabki IELTS tayyorgarligi</li>
+                <li><i class="fa-solid fa-check-circle"></i> Python dasturlash, kompyuter savodxonligi va fan olimpiadalari</li>
               </ul>
               <button class="btn btn-primary open-admission-modal">O'rta sinfga ariza topshirish</button>
             </div>
             <div class="tab-image">
-              <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=800&q=80" alt="O'rta sinf o'quvchilari">
-            </div>
-          </div>
-        </div>
-
-        <!-- 3-tab -->
-        <div class="tab-pane" id="highTab">
-          <div class="tab-content-grid">
-            <div class="tab-info">
-              <h3>Yuqori sinflar: Oliygoh va grant kafolati</h3>
-              <p>
-                10–11-sinflarda o'quvchilar o'zlari tanlagan kasblar bo'yicha yo'nalishli guruhlarda tahsil oladilar.
-              </p>
-              <ul class="tab-list">
-                <li><i class="fa-solid fa-check-circle"></i> IELTS (7.0+) va SAT xalqaro imtihonlari intensiv kursi</li>
-                <li><i class="fa-solid fa-check-circle"></i> Xorijiy va mahalliy OTMlarga 100% grant yutish strategiyasi</li>
-                <li><i class="fa-solid fa-check-circle"></i> Karyera yo'nalishi (Career guidance) va shaxsiy mentorlik</li>
-                <li><i class="fa-solid fa-check-circle"></i> Notiqlik, yetakchilik va zamonaviy IT ko'nikmalari</li>
-              </ul>
-              <button class="btn btn-primary open-admission-modal">Yuqori sinfga ariza topshirish</button>
-            </div>
-            <div class="tab-image">
-              <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Yuqori sinf o'quvchilari">
+              <img src="images/teachers/najmiddin-bektemirov.jpg" alt="O'rta sinf biologiya fani" style="max-height: 400px; object-fit: cover; border-radius: var(--radius-lg);">
             </div>
           </div>
         </div>
@@ -446,9 +449,9 @@
         <div class="footer-col">
           <h3 data-i18n="footer_programs_title">Ta'lim dasturlari</h3>
           <ul class="footer-links">
+            <li><a href="programs.html#prepTab"><i class="fa-solid fa-angle-right"></i> 0-sinf (Tayyorlov)</a></li>
             <li><a href="programs.html#primaryTab"><i class="fa-solid fa-angle-right"></i> Boshlang'ich (1–4)</a></li>
             <li><a href="programs.html#middleTab"><i class="fa-solid fa-angle-right"></i> O'rta maktab (5–9)</a></li>
-            <li><a href="programs.html#highTab"><i class="fa-solid fa-angle-right"></i> Yuqori maktab (10–11)</a></li>
             <li><a href="programs.html"><i class="fa-solid fa-angle-right"></i> Cambridge English</a></li>
             <li><a href="programs.html"><i class="fa-solid fa-angle-right"></i> IT & Dasturlash</a></li>
           </ul>
@@ -494,6 +497,7 @@
             <label class="form-label">Topshirmoqchi bo'lgan sinfi *</label>
             <select class="form-control" required>
               <option value="">Sinfni tanlang...</option>
+              <option value="0">0-sinf (Maktabga tayyorlov)</option>
               <option value="1">1-sinf</option>
               <option value="2">2-sinf</option>
               <option value="3">3-sinf</option>
@@ -503,8 +507,6 @@
               <option value="7">7-sinf</option>
               <option value="8">8-sinf</option>
               <option value="9">9-sinf</option>
-              <option value="10">10-sinf</option>
-              <option value="11">11-sinf</option>
             </select>
           </div>
           <div class="form-group">

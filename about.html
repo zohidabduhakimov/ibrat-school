@@ -221,114 +221,167 @@
       </div>
     </section>
 
-    <!-- RAHBARIYAT -->
-    <section class="section bg-alt">
+    <!-- ==========================================================================
+         PEDAGOGIK JAMOA VA KOORDINATORLAR
+         ========================================================================== -->
+    <section class="section" id="teachers">
       <div class="container">
         <div class="section-title-wrap">
-          <span class="section-badge">Jamoa</span>
-          <h2 class="section-title">Maktab rahbariyati</h2>
-          <p class="section-subtitle">IBRAT SCHOOL rivojiga rahbarlik qilayotgan soha yetakchilari.</p>
+          <span class="section-badge">Jamoamiz</span>
+          <h2 class="section-title">Bizning Ustozlar va Koordinatorlar</h2>
+          <p class="section-subtitle">Har bir o'quvchining ichki iqtidorini mehr va yuksak kasbiy mahorat bilan ochuvchi professional pedagoglarimiz.</p>
+        </div>
+
+        <!-- Filtr tugmalari -->
+        <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 35px;">
+          <button class="filter-btn teacher-filter-btn active" data-filter="all">Barchasi</button>
+          <button class="filter-btn teacher-filter-btn" data-filter="coordinator">Koordinatorlar</button>
+          <button class="filter-btn teacher-filter-btn" data-filter="primary">0-sinf va Boshlang'ich</button>
+          <button class="filter-btn teacher-filter-btn" data-filter="subject">Fan o'qituvchilari</button>
+          <button class="filter-btn teacher-filter-btn" data-filter="health">Salomatlik & Sport</button>
         </div>
 
         <div class="team-grid">
-          <div class="team-card">
+          <!-- 1. Sardorbek Quvvatov (Bosh koordinator) -->
+          <div class="team-card teacher-card-item" data-category="coordinator">
             <div class="team-img-wrap">
-              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=80" alt="Bosh direktor">
+              <img src="images/teachers/sardorbek-quvvatov.jpg" alt="Sardorbek Quvvatov — Bosh koordinator">
             </div>
             <div class="team-info">
-              <h3 class="team-name">Shavkat Karimov</h3>
-              <div class="team-role">Maktab Bosh Direktori</div>
-              <p class="team-exp">Pedagogika fanlari nomzodi, 22 yillik ta'lim tajribasi.</p>
+              <span class="team-class-badge" style="background: rgba(217, 119, 6, 0.12); color: var(--accent);">Bosh Koordinator</span>
+              <h3 class="team-name">Sardorbek Quvvatov</h3>
+              <div class="team-role">Maktabimizning Bosh Koordinatori</div>
+              <p class="team-exp">O'quv jarayonlari, sinf rahbarlari faoliyati, xalqaro ta'lim standartlari va maktab tartib-intizomi yetakchisi.</p>
             </div>
           </div>
 
-          <div class="team-card">
+          <!-- 2. Maftuna Rahmonova (0-sinf) -->
+          <div class="team-card teacher-card-item" data-category="primary">
             <div class="team-img-wrap">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80" alt="Direktor o'rinbosari">
+              <img src="images/teachers/maftuna-rahmonova.jpg" alt="Maftuna Rahmonova — 0-sinf o'qituvchisi">
             </div>
             <div class="team-info">
-              <h3 class="team-name">Gulnoza Ahmedova</h3>
-              <div class="team-role">O'quv ishlari bo'yicha mudir</div>
-              <p class="team-exp">Oliy toifali metodist, 18 yillik ilmiy amaliyot.</p>
+              <span class="team-class-badge" style="background: rgba(16, 185, 129, 0.12); color: var(--success);">0-Sinf Rahbari</span>
+              <h3 class="team-name">Maftuna Rahmonova</h3>
+              <div class="team-role">0-sinf o'qituvchisi</div>
+              <p class="team-exp">Maktabga tayyorlov guruhi rahbari. 5–6 yoshli bolalarning nutqi, mantiqiy fikrlashi va ilk maktab ko'nikmalarini mehr bilan rivojlantiruvchi mutaxassis.</p>
             </div>
           </div>
 
-          <div class="team-card">
+          <!-- 3. Zulxumor Djurayeva (1-sinf) -->
+          <div class="team-card teacher-card-item" data-category="primary">
             <div class="team-img-wrap">
-              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=500&q=80" alt="Cambridge koordinator">
+              <img src="images/teachers/zulxumor-djurayeva.jpg" alt="Zulxumor Djurayeva — 1-sinf o'qituvchisi">
             </div>
             <div class="team-info">
-              <h3 class="team-name">David Miller</h3>
-              <div class="team-role">Xalqaro ta'lim koordinatori</div>
-              <p class="team-exp">Cambridge Assessment sertifikatli xalqaro mutaxassis.</p>
+              <span class="team-class-badge" style="background: rgba(2, 132, 199, 0.12); color: var(--secondary);">1-Sinf Rahbari</span>
+              <h3 class="team-name">Zulxumor Djurayeva</h3>
+              <div class="team-role">1-sinf o'qituvchisi</div>
+              <p class="team-exp">1-sinf o'quvchilariga mustahkam hisob-kitob, chiroyli husnixat va o'qish qobiliyatini singdiruvchi tajribali pedagog.</p>
             </div>
           </div>
 
-          <div class="team-card">
+          <!-- 4. Shahnoza Shamsiddinova (2-sinf) -->
+          <div class="team-card teacher-card-item" data-category="primary">
             <div class="team-img-wrap">
-              <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=500&q=80" alt="Bosh psixolog">
+              <img src="images/teachers/shahnoza-shamsiddinova.jpg" alt="Shahnoza Shamsiddinova — 2-sinf o'qituvchisi">
             </div>
             <div class="team-info">
-              <h3 class="team-name">Nargiza Zokirova</h3>
-              <div class="team-role">Bosh psixolog va tarbiya mudiri</div>
-              <p class="team-exp">Bolalar psixologiyasi bo'yicha xalqaro ekspert.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- O'QITUVCHILAR (Robototexnika o'rniga Informatika & Dasturlash) -->
-    <section class="section">
-      <div class="container">
-        <div class="section-title-wrap">
-          <span class="section-badge">Ustozlar</span>
-          <h2 class="section-title">Bizning tajribali ustozlarimiz</h2>
-          <p class="section-subtitle">Har bir darsni qiziqarli sarguzashtga aylantiruvchi yuksak malakali o'qituvchilarimiz.</p>
-        </div>
-
-        <div class="team-grid">
-          <div class="team-card">
-            <div class="team-img-wrap">
-              <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=500&q=80" alt="Matematika ustozi">
-            </div>
-            <div class="team-info">
-              <h3 class="team-name">Diyora Mansurova</h3>
-              <div class="team-role">Matematika o'qituvchisi</div>
-              <p class="team-exp">Xalqaro olimpiada sovrindorlari ustozi. Tajriba: 10 yil.</p>
+              <span class="team-class-badge" style="background: rgba(2, 132, 199, 0.12); color: var(--secondary);">2-Sinf Rahbari</span>
+              <h3 class="team-name">Shahnoza Shamsiddinova</h3>
+              <div class="team-role">2-sinf o'qituvchisi</div>
+              <p class="team-exp">2-sinf rahbari. O'quvchilarda mustaqil fikrlash, kitobxonlik va amaliy mantiqiy qobiliyatlarni o'stiruvchi fidoyi ustoz.</p>
             </div>
           </div>
 
-          <div class="team-card">
+          <!-- 5. Zuhra Bektemirova (3-sinf) -->
+          <div class="team-card teacher-card-item" data-category="primary">
             <div class="team-img-wrap">
-              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80" alt="Ingliz tili ustozi">
+              <img src="images/teachers/zuhra-bektemirova.jpg" alt="Zuhra Bektemirova — 3-sinf o'qituvchisi">
             </div>
             <div class="team-info">
-              <h3 class="team-name">James Wilson</h3>
-              <div class="team-role">Ingliz tili (Native Speaker)</div>
-              <p class="team-exp">CELTA & DELTA sertifikati egasi (Buyuk Britaniya). Tajriba: 8 yil.</p>
+              <span class="team-class-badge" style="background: rgba(2, 132, 199, 0.12); color: var(--secondary);">3-Sinf Rahbari</span>
+              <h3 class="team-name">Zuhra Bektemirova</h3>
+              <div class="team-role">3-sinf o'qituvchisi</div>
+              <p class="team-exp">3-sinf rahbari. Darslarni interaktiv metodlar, chuqurlashtirilgan mashqlar va ijodiy topshiriqlar asosida olib boruvchi yetakchi ustoz.</p>
             </div>
           </div>
 
-          <div class="team-card">
+          <!-- 6. Hanifa Rahmatova (Boshlang'ich sinf) -->
+          <div class="team-card teacher-card-item" data-category="primary">
             <div class="team-img-wrap">
-              <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=500&q=80" alt="IT ustozi">
+              <img src="images/teachers/hanifa-rahmatova.jpg" alt="Hanifa Rahmatova — Boshlang'ich sinf o'qituvchisi">
             </div>
             <div class="team-info">
-              <h3 class="team-name">Zarina Qosimova</h3>
-              <div class="team-role">Informatika va Dasturlash (IT) ustozi</div>
-              <p class="team-exp">Dasturchi-muhandis, Python va IT loyihalar ustozi. Tajriba: 7 yil.</p>
+              <span class="team-class-badge" style="background: rgba(139, 92, 246, 0.12); color: #7c3aed);">Boshlang'ich Ta'lim</span>
+              <h3 class="team-name">Hanifa Rahmatova</h3>
+              <div class="team-role">Boshlangʻich sinf oʻqituvchisi</div>
+              <p class="team-exp">Oliy ma'lumotli boshlang'ich ta'lim mutaxassisi, zamonaviy metodikalar va yangi avlod ta'lim tizimi ustasi.</p>
             </div>
           </div>
 
-          <div class="team-card">
+          <!-- 7. Umriya Qahhorova (Boshlang'ich yordamchi ustoz) -->
+          <div class="team-card teacher-card-item" data-category="primary">
             <div class="team-img-wrap">
-              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80" alt="Fizika ustozi">
+              <img src="images/teachers/umriya-qahhorova.jpg" alt="Umriya Qahhorova — Boshlang'ich sinflar yordamchi ustozi">
             </div>
             <div class="team-info">
-              <h3 class="team-name">Bobur Ismoilov</h3>
-              <div class="team-role">Fizika fani o'qituvchisi</div>
-              <p class="team-exp">Oliy toifali ustoz, amaliy laboratoriyalar yetakchisi. Tajriba: 14 yil.</p>
+              <span class="team-class-badge" style="background: rgba(236, 72, 153, 0.12); color: #db2777);">Yordamchi Ustoz</span>
+              <h3 class="team-name">Umriya Qahhorova</h3>
+              <div class="team-role">Boshlangʻich sinflar uchun yordamchi ustoz</div>
+              <p class="team-exp">O'quvchilar bilan individual ishlash, har bir bolaning o'zlashtirishini nazorat qilish va darslarni mustahkamlashda mas'ul ustoz.</p>
+            </div>
+          </div>
+
+          <!-- 8. Najmiddin Bektemirov (Biologiya) -->
+          <div class="team-card teacher-card-item" data-category="subject">
+            <div class="team-img-wrap">
+              <img src="images/teachers/najmiddin-bektemirov.jpg" alt="Najmiddin Bektemirov — Biologiya fani o'qituvchisi">
+            </div>
+            <div class="team-info">
+              <span class="team-class-badge" style="background: rgba(16, 185, 129, 0.12); color: var(--success);">Biologiya & Tabiiy Fanlar</span>
+              <h3 class="team-name">Najmiddin Bektemirov</h3>
+              <div class="team-role">Biologiya fani oʻqituvchisi</div>
+              <p class="team-exp">Tabiiy fanlar, amaliy laboratoriyalar, tirik tabiat sirlari va fan olimpiadalariga iqtidorli o'quvchilarni tayyorlash mutaxassisi.</p>
+            </div>
+          </div>
+
+          <!-- 9. Shaxriyor Odilov (Jismoniy tarbiya) -->
+          <div class="team-card teacher-card-item" data-category="health">
+            <div class="team-img-wrap">
+              <img src="images/teachers/shaxriyor-odilov.jpg" alt="Shaxriyor Odilov — Jismoniy tarbiya fani o'qituvchisi">
+            </div>
+            <div class="team-info">
+              <span class="team-class-badge" style="background: rgba(239, 68, 68, 0.12); color: var(--danger);">Jismoniy Tarbiya & Sport</span>
+              <h3 class="team-name">Shaxriyor Odilov</h3>
+              <div class="team-role">Jismoniy tarbiya fani oʻqituvchisi</div>
+              <p class="team-exp">O'quvchilarning jismoniy baquvvatligi, chaqqonligi, sport to'garaklari va sog'lom turmush tarzi yetakchisi.</p>
+            </div>
+          </div>
+
+          <!-- 10. Shahzoda Xaripova (Hamshira) -->
+          <div class="team-card teacher-card-item" data-category="health">
+            <div class="team-img-wrap">
+              <img src="images/teachers/shahzoda-xaripova.jpg" alt="Shahzoda Xaripova — Maktab hamshirasi">
+            </div>
+            <div class="team-info">
+              <span class="team-class-badge" style="background: rgba(14, 165, 233, 0.12); color: #0284c7);">Maktab Hamshirasi</span>
+              <h3 class="team-name">Shahzoda Xaripova</h3>
+              <div class="team-role">Maktabimiz hamshirasi</div>
+              <p class="team-exp">O'quvchilar salomatligini har kuni nazorat qilish, to'g'ri gigiyena, to'yimli parhez va birinchi tezkor tibbiy yordam ko'rsatuvchi mutaxassis.</p>
+            </div>
+          </div>
+
+          <!-- 11. Cambridge Ingliz tili kafedrasi -->
+          <div class="team-card teacher-card-item" data-category="subject">
+            <div class="team-img-wrap">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" alt="Ingliz tili ustozi">
+            </div>
+            <div class="team-info">
+              <span class="team-class-badge" style="background: rgba(217, 119, 6, 0.12); color: var(--accent);">Cambridge & IELTS</span>
+              <h3 class="team-name">Cambridge English Jamoasi</h3>
+              <div class="team-role">Xorijiy tillar kafedrasi ustozlari</div>
+              <p class="team-exp">Oxford & Cambridge dasturlari bo'yicha Native speakers va yuqori IELTS natijalariga ega tajribali til o'qituvchilari.</p>
             </div>
           </div>
         </div>
@@ -411,9 +464,9 @@
         <div class="footer-col">
           <h3 data-i18n="footer_programs_title">Ta'lim dasturlari</h3>
           <ul class="footer-links">
+            <li><a href="programs.html#prepTab"><i class="fa-solid fa-angle-right"></i> 0-sinf (Tayyorlov)</a></li>
             <li><a href="programs.html#primaryTab"><i class="fa-solid fa-angle-right"></i> Boshlang'ich (1–4)</a></li>
             <li><a href="programs.html#middleTab"><i class="fa-solid fa-angle-right"></i> O'rta maktab (5–9)</a></li>
-            <li><a href="programs.html#highTab"><i class="fa-solid fa-angle-right"></i> Yuqori maktab (10–11)</a></li>
             <li><a href="programs.html"><i class="fa-solid fa-angle-right"></i> Cambridge English</a></li>
             <li><a href="programs.html"><i class="fa-solid fa-angle-right"></i> IT & Dasturlash</a></li>
           </ul>
@@ -459,6 +512,7 @@
             <label class="form-label">Topshirmoqchi bo'lgan sinfi *</label>
             <select class="form-control" required>
               <option value="">Sinfni tanlang...</option>
+              <option value="0">0-sinf (Maktabga tayyorlov)</option>
               <option value="1">1-sinf</option>
               <option value="2">2-sinf</option>
               <option value="3">3-sinf</option>
@@ -468,8 +522,6 @@
               <option value="7">7-sinf</option>
               <option value="8">8-sinf</option>
               <option value="9">9-sinf</option>
-              <option value="10">10-sinf</option>
-              <option value="11">11-sinf</option>
             </select>
           </div>
           <div class="form-group">

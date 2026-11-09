@@ -7,25 +7,43 @@ Ushbu loyiha **IBRAT SCHOOL** xususiy maktabi uchun maxsus yaratilgan zamonaviy,
 ## 🏫 Maktab haqida asosiy ma'lumotlar
 
 - **Nomi:** IBRAT SCHOOL (Ibrat Xususiy Maktabi)
-- **Emblemasi:** Rasmiy ko'k-qizil romb va markazida sariq halqali "IS" ramzi (`images/logo.png`)
+- **Ta'lim bosqichlari:** **0-sinfdan 9-sinfgacha** (0-sinf Maktabga tayyorlov guruhi, 1–4-sinflar Boshlang'ich ta'lim, 5–9-sinflar O'rta maktab)
+- **Emblemasi:** Rasmiy ko'k-qizil romb va markazida sariq halqali "IS" ramzi (shaffof fonli PNG, `images/logo.png`)
 - **Telefon raqami:** `+998 (94) 702-44-56`
 - **Telegram kanali:** [https://t.me/ibrat_schools](https://t.me/ibrat_schools) (`@ibrat_schools`)
 - **Instagram sahifasi:** [https://instagram.com/ibrat_schooll](https://instagram.com/ibrat_schooll) (`@ibrat_schooll`)
-- **O'qish va ish kunlari:** Dushanbadan Shanbagacha (haftada 6 kun), 08:00 dan 18:00 gacha
+- **O'qish va ish kunlari:** Dushanbadan Shanbagacha (haftada 6 kun), darslar **soat 09:00 da** boshlanadi (09:00 – 18:00)
 - **Manzil:** Yangiyer shahri, Loyihachilar ko'chasi 2-uy
 
 ---
 
-## 🤖 Yangi imkoniyat: IBRAT AI Maslahatchisi (AI Chatbot)
+## 👨‍🏫 Pedagogik jamoa va Koordinatorlar
 
-Saytning pastki o'ng burchagida doimiy ishlovchi **IBRAT AI** intellektual yordamchisi o'rnatilgan.
-- Ota-onalar va o'quvchilar savollariga real vaqtda javob beradi:
-  - 📅 O'qish kunlari (Dushanba – Shanba tartibi)
-  - 🎓 Qabul bosqichlari va imtihonlar
-  - 💰 O'qish narxlari (3.2 mln, 3.6 mln, 3.9 mln so'm)
-  - 📚 Chuqurlashtirilgan fanlar (Matematika, Cambridge English, IT)
-  - 📞 Telefon (`+998 94 702 44 56`) va manzil
-  - ✍️ To'g'ridan-to'g'ri qabulga ariza qoldirish
+Maktabimizning rasmiy pedagogik jamoasi va haqiqiy fotosuratlari saytga to'liq kiritilgan:
+
+1. **Sardorbek Quvvatov** — Maktabimizning bosh koordinatori (`images/teachers/sardorbek-quvvatov.jpg`)
+2. **Maftuna Rahmonova** — Maktabimizning 0-sinf o'qituvchisi (`images/teachers/maftuna-rahmonova.jpg`)
+3. **Zulxumor Djurayeva** — Maktabimizning 1-sinf oʻqituvchisi (`images/teachers/zulxumor-djurayeva.jpg`)
+4. **Shahnoza Shamsiddinova** — Maktabimizning 2-sinf oʻqituvchisi (`images/teachers/shahnoza-shamsiddinova.jpg`)
+5. **Zuhra Bektemirova** — Maktabimizning 3-sinf o'qituvchisi (`images/teachers/zuhra-bektemirova.jpg`)
+6. **Hanifa Rahmatova** — Maktabimizning boshlangʻich sinf oʻqituvchisi (`images/teachers/hanifa-rahmatova.jpg`)
+7. **Umriya Qahhorova** — Maktabimizning boshlangʻich sinflari uchun yordamchi ustozimiz (`images/teachers/umriya-qahhorova.jpg`)
+8. **Najmiddin Bektemirov** — Biologiya fani oʻqituvchisi (`images/teachers/najmiddin-bektemirov.jpg`)
+9. **Shaxriyor Odilov** — Jismoniy tarbiya fani oʻqituvchisi (`images/teachers/shaxriyor-odilov.jpg`)
+10. **Shahzoda Xaripova** — Maktabimiz hamshirasi (`images/teachers/shahzoda-xaripova.jpg`)
+11. **Cambridge English kafedrasi** — Xalqaro sertifikatli ingliz tili ustozlari
+
+---
+
+## 🤖 IBRAT AI Maslahatchisi (AI Chatbot)
+
+Saytning pastki o'ng burchagida doimiy ishlovchi **IBRAT AI** intellektual yordamchisi o'rnatilgan:
+- 📅 O'qish kunlari va soatlari (Dushanba – Shanba, darslar 09:00 da boshlanadi)
+- 🎓 0–9-sinflar uchun qabul bosqichlari va ariza topshirish
+- 👨‍🏫 Ustozlar, sinf rahbarlari, koordinator va maktab hamshirasi haqida ma'lumot
+- 📚 Chuqurlashtirilgan fanlar (Matematika, Cambridge English, IT, Biologiya)
+- 📞 Telefon (`+998 94 702 44 56`) va manzil (Yangiyer sh., Loyihachilar 2-uy)
+- ✍️ To'g'ridan-to'g'ri qabul arizasi ochish
 
 ---
 
@@ -33,27 +51,29 @@ Saytning pastki o'ng burchagida doimiy ishlovchi **IBRAT AI** intellektual yorda
 
 ```text
 ziyonur-maktab/
-├── index.html          # 1. BOSH SAHIFA (Hero, animatsiyali raqamlar, universitetlar, so'nggi yangiliklar, fikrlar slayderi, AI Yordamchi)
-├── about.html          # 2. MAKTAB HAQIDA (Maktab tarixi / Timeline, missiya va qadriyatlar, rahbariyat, o'qituvchilar jamoasi)
-├── admissions.html     # 3. QABUL 2026-2027 (4 ta qabul bosqichi, hujjatlar, imtihon sanalari, narxlar jadvali, onlayn ariza shakli, FAQ)
-├── programs.html       # 4. TA'LIM DASTURLARI (Boshlang'ich, o'rta, yuqori sinflar tablari, fanlar, to'garaklar, Dushanba-Shanba dars jadvali)
-├── news.html           # 5. YANGILIKLAR VA TADBIRLAR (Yangiliklar ro'yxati, tadbirlar taqvimi, filtrlanuvchi fotogalereya va Lightbox)
-├── contact.html        # 6. ALOQA (Manzil, telefonlar, Google Xarita, Telegram/Instagram tugmalari, "Savol bering" formasi)
+├── index.html          # 1. BOSH SAHIFA (Hero, ustozlar vitrinasi, ota-onalar fikrlari, so'nggi yangiliklar, AI Yordamchi)
+├── about.html          # 2. MAKTAB HAQIDA (Maktab tarixi, filtrlanuvchi ustozlar va koordinatorlar to'liq ro'yxati)
+├── admissions.html     # 3. QABUL 2026-2027 (0–9-sinflar qabul bosqichlari, imtihon grafigi, onlayn ariza shakli, FAQ)
+├── programs.html       # 4. TA'LIM DASTURLARI (0-sinf tayyorlov, 1-4-sinflar, 5-9-sinflar tablari, dars jadvali)
+├── news.html           # 5. YANGILIKLAR VA TADBIRLAR (Yangiliklar ro'yxati, tadbirlar, fotogalereya va Lightbox)
+├── contact.html        # 6. ALOQA (Yangiyer manzili, telefon, Telegram @ibrat_schools, Instagram @ibrat_schooll, Google Xarita)
 ├── css/
-│   └── style.css       # To'liq CSS uslublari, brend ranglari, mobil moslashuvchanlik, AI Chatbot uslublari
+│   └── style.css       # To'liq CSS uslublari, brend ranglari, mobil moslashuvchanlik, jamoa nishonlari, AI Chatbot
 ├── js/
-│   └── main.js         # Mobil menyu, til almashtirgich, counter animatsiyasi, slayder, tablar, FAQ, galereya, formalar va AI Chatbot logikasi
+│   └── main.js         # Ko'p tillilik (UZ/RU/EN), mobil menyu, filtrlar, hisoblagich, modal va AI chatbot
 ├── images/
-│   ├── logo.png        # IBRAT SCHOOL rasmiy kesilgan emblemasi (to'rtburchak/vertikal)
-│   ├── logo-square.png # IBRAT SCHOOL kvadrat/aylana emblemasi (Favicon va AI Avatar uchun)
-│   └── ...             # Boshqa rasmlar
-└── README.md           # Ushbu to'liq qo'llanma
+│   ├── logo.png        # Shaffof fonli IBRAT SCHOOL rasmiy emblemasi
+│   ├── logo-square.png # Favicon va avatar uchun kvadrat emblema
+│   └── teachers/       # Ustozlar va koordinatorlarning rasmiy fotosuratlari
+│       ├── sardorbek-quvvatov.jpg
+│       ├── maftuna-rahmonova.jpg
+│       ├── zulxumor-djurayeva.jpg
+│       ├── shahnoza-shamsiddinova.jpg
+│       ├── zuhra-bektemirova.jpg
+│       ├── hanifa-rahmatova.jpg
+│       ├── umriya-qahhorova.jpg
+│       ├── najmiddin-bektemirov.jpg
+│       ├── shaxriyor-odilov.jpg
+│       └── shahzoda-xaripova.jpg
+└── README.md
 ```
-
----
-
-## 🚀 Qanday ishga tushiriladi?
-
-1. Loyiha papkasidagi istalgan `.html` faylni (masalan, `index.html`) brauzeringizda (Google Chrome, Microsoft Edge va h.k.) oching.
-2. Barcha sahifalarda havola va tugmalar o'zaro to'liq bog'langan.
-3. Istalgan sahifada o'ng pastki burchakdagi **"IBRAT AI"** tugmasini bosib, sun'iy intellekt maslahatchisi bilan suhbatlashishingiz mumkin.

@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
       nav_news: "Yangiliklar",
       nav_contact: "Aloqa",
       btn_admission: "Qabul ochiq",
-      hero_badge: "2026–2027 o'quv yili uchun qabul ochiq!",
+      hero_badge: "2026–2027 o'quv yili uchun qabul ochiq! (0–9-sinflar)",
       hero_title: "IBRAT SCHOOL — Kelajak yetakchilarini tarbiyalaymiz",
-      hero_desc: "1–11-sinflar uchun dushanbadan shanbagacha yuqori sifatli akademik ta'lim, chuqurlashtirilgan matematika, xalqaro Cambridge ingliz tili, IT va mustahkam axloqiy tarbiya maskani.",
+      hero_desc: "0–9-sinflar uchun dushanbadan shanbagacha yuqori sifatli akademik ta'lim, chuqurlashtirilgan matematika, xalqaro Cambridge ingliz tili, IT va mustahkam axloqiy tarbiya maskani.",
       hero_btn_apply: "Ariza topshirish",
       hero_btn_about: "Maktab bilan tanishing",
       hero_feat1_title: "Dushanba – Shanba",
@@ -79,9 +79,9 @@ document.addEventListener('DOMContentLoaded', () => {
       nav_news: "Новости",
       nav_contact: "Контакты",
       btn_admission: "Приём открыт",
-      hero_badge: "Открыт приём на 2026–2027 учебный год!",
+      hero_badge: "Открыт приём на 2026–2027 учебный год! (0–9 классы)",
       hero_title: "IBRAT SCHOOL — Воспитываем лидеров будущего",
-      hero_desc: "Качественное академическое образование с понедельника по субботу для 1–11 классов: углубленная математика, международный английский Cambridge, IT и духовно-нравственное воспитание.",
+      hero_desc: "Качественное академическое образование с понедельника по субботу для 0–9 классов: углубленная математика, международный английский Cambridge, IT и духовно-нравственное воспитание.",
       hero_btn_apply: "Подать заявку",
       hero_btn_about: "Узнать о школе",
       hero_feat1_title: "Понедельник – Суббота",
@@ -138,9 +138,9 @@ document.addEventListener('DOMContentLoaded', () => {
       nav_news: "News",
       nav_contact: "Contact",
       btn_admission: "Admissions Open",
-      hero_badge: "Admissions open for 2026–2027 academic year!",
+      hero_badge: "Admissions open for 2026–2027 academic year! (Grades 0–9)",
       hero_title: "IBRAT SCHOOL — Nurturing Future Leaders",
-      hero_desc: "High-quality academic education Monday through Saturday for grades 1–11: advanced mathematics, Cambridge English, IT, and strong moral character building.",
+      hero_desc: "High-quality academic education Monday through Saturday for grades 0–9: advanced mathematics, Cambridge English, IT, and strong moral character building.",
       hero_btn_apply: "Apply for Admission",
       hero_btn_about: "Learn About School",
       hero_feat1_title: "Monday – Saturday",
@@ -425,7 +425,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================================================
-  // 7. GALEREYA FILTRI VA LIGHTBOX
+  // 7. GALEREYA VA USTOZLAR FILTRI VA LIGHTBOX
   // ==========================================================================
   const filterBtns = document.querySelectorAll('.filter-btn');
   const galleryItems = document.querySelectorAll('.gallery-item');
@@ -445,6 +445,26 @@ document.addEventListener('DOMContentLoaded', () => {
             item.style.display = 'block';
           } else {
             item.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
+  // Ustozlar filtri (Teacher filter)
+  const teacherFilterBtns = document.querySelectorAll('.teacher-filter-btn');
+  const teacherCards = document.querySelectorAll('.teacher-card-item');
+  if (teacherFilterBtns.length > 0 && teacherCards.length > 0) {
+    teacherFilterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        teacherFilterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const cat = btn.getAttribute('data-filter');
+        teacherCards.forEach(card => {
+          if (cat === 'all' || card.getAttribute('data-category') === cat) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
           }
         });
       });
@@ -668,7 +688,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Qabul va ro'yxatdan o'tish
     if (q.includes('qabul') || q.includes('ariza') || q.includes('hujjat') || q.includes('imtihon') || q.includes('kirish') || q.includes('topshir')) {
       return `🎓 <b>IBRAT SCHOOL 2026–2027 o'quv yili uchun qabul ochiq!</b><br><br>
-      1–11-sinflar uchun qabul bosqichlari:<br>
+      <b>0–9-sinflar uchun</b> (0-sinf maktabga tayyorlov, 1–4-sinf boshlang'ich va 5–9-sinf o'rta maktab):<br>
       1️⃣ Onlayn ariza qoldirish<br>
       2️⃣ Matematika va ingliz tilidan bilim sinovi hamda suhbat<br>
       3️⃣ Hujjatlarni topshirish<br>
@@ -676,6 +696,23 @@ document.addEventListener('DOMContentLoaded', () => {
       <button class="btn btn-primary btn-sm open-admission-modal" style="margin-top:6px; padding:6px 14px; font-size:0.8rem;">
         ✍️ Onlayn ariza topshirish
       </button>`;
+    }
+
+    // 2.5 Ustozlar va jamoa
+    if (q.includes('ustoz') || q.includes('o\'qituvchi') || q.includes('oqituvchi') || q.includes('jamoa') || q.includes('rahbar') || q.includes('koordinator') || q.includes('hamshira')) {
+      return `👨‍🏫 <b>IBRAT SCHOOL professional pedagogik jamoasi:</b><br><br>
+      • <b>Sardorbek Quvvatov</b> — Maktabimizning bosh koordinatori<br>
+      • <b>Maftuna Rahmonova</b> — 0-sinf (Maktabga tayyorlov) o'qituvchisi<br>
+      • <b>Zulxumor Djurayeva</b> — 1-sinf o'qituvchisi (Sinf rahbari)<br>
+      • <b>Shahnoza Shamsiddinova</b> — 2-sinf o'qituvchisi (Sinf rahbari)<br>
+      • <b>Zuhra Bektemirova</b> — 3-sinf o'qituvchisi (Sinf rahbari)<br>
+      • <b>Hanifa Rahmatova</b> — Boshlang'ich sinf o'qituvchisi<br>
+      • <b>Umriya Qahhorova</b> — Boshlang'ich sinflar uchun yordamchi ustoz<br>
+      • <b>Najmiddin Bektemirov</b> — Biologiya fani o'qituvchisi<br>
+      • <b>Shaxriyor Odilov</b> — Jismoniy tarbiya fani o'qituvchisi<br>
+      • <b>Shahzoda Xaripova</b> — Maktabimiz malakali hamshirasi<br>
+      • <b>Cambridge English ustozlari</b> — Xalqaro sertifikatli ingliz tili mutaxassislari.<br><br>
+      Barcha ustozlarimiz haqida batafsil <b>"Maktab haqida"</b> sahifasida ko'rishingiz mumkin!`;
     }
 
     // 3. To'lov / imtiyozlar haqida
@@ -709,7 +746,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return `Assalomu alaykum! <b>IBRAT SCHOOL</b> xususiy maktabining sun'iy intellekt maslahatchisi xizmatingizda! Darslarimiz soat 09:00 da boshlanadi. Sizga qanday yordam bera olaman?`;
     }
 
-    return `Savolingiz uchun tashakkur! <b>IBRAT SCHOOL</b> — 1–11-sinflar uchun dushanbadan shanbagacha (darslar 09:00 dan) sifatli ta'lim beruvchi zamonaviy maktab. Qo'shimcha ma'lumot: <b>+998 (94) 702-44-56</b> yoki Telegram: <b>@ibrat_schools</b>`;
+    return `Savolingiz uchun tashakkur! <b>IBRAT SCHOOL</b> — 0–9-sinflar uchun dushanbadan shanbagacha (darslar 09:00 dan) sifatli ta'lim beruvchi zamonaviy xususiy maktab. Qo'shimcha ma'lumot: <b>+998 (94) 702-44-56</b> yoki Telegram: <b>@ibrat_schools</b>`;
   }
 
   // Toast bildirishnoma

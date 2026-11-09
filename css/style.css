@@ -1079,11 +1079,26 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: var(--shadow-sm);
   text-align: center;
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
 }
 
 .team-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-xl);
+}
+
+.team-class-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(2, 132, 199, 0.1);
+  color: var(--secondary);
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .team-img-wrap {
