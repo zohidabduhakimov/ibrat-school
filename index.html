@@ -1,0 +1,661 @@
+﻿<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IBRAT SCHOOL — Zamonaviy xususiy maktab va xalqaro ta'lim</title>
+  <meta name="description" content="IBRAT SCHOOL xususiy maktabi — 1–11-sinflar uchun dushanbadan shanbagacha chuqurlashtirilgan matematika, ingliz tili va IT ta'limi. 2026–2027 o'quv yili uchun qabul ochiq!">
+  
+  <!-- Favicon: Maktab Emblemasi -->
+  <link rel="icon" type="image/png" href="images/logo-square.png">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Ikonkalari -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Asosiy CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. TEPADAGI TEZKOR MA'LUMOT PANELI (TOPBAR)
+       ========================================================================== -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-info">
+        <!-- Telefon raqam -->
+        <div class="topbar-item">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+998947024456" style="color:inherit; font-weight:700;">+998 (94) 702-44-56</a>
+        </div>
+        <!-- O'qish kunlari va ish vaqti: Dushanbadan Shanbagacha -->
+        <div class="topbar-item">
+          <i class="fa-regular fa-calendar-days"></i>
+          <span>Dushanba – Shanba: 08:00 – 18:00</span>
+        </div>
+        <!-- Manzil -->
+        <div class="topbar-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Yangiyer sh., Loyihachilar ko'chasi 2-uy</span>
+        </div>
+      </div>
+
+      <div class="topbar-actions">
+        <!-- Tillar almashtirgich (UZ / RU / EN) -->
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="uz">UZ</button>
+          <button class="lang-btn" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+
+        <!-- Ijtimoiy tarmoqlar: Telegram & Instagram -->
+        <div class="topbar-social">
+          <a href="https://t.me/ibrat_schools" target="_blank" title="Telegram kanalimiz: @ibrat_schools"><i class="fa-brands fa-telegram"></i></a>
+          <a href="https://instagram.com/ibrat_schooll" target="_blank" title="Instagram sahifamiz: @ibrat_schooll"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       2. ASOSIY MENYU (HEADER / NAVBAR)
+       Maktab Emblemasi va Nomi: IBRAT SCHOOL
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <!-- Logotip: IBRAT SCHOOL Emblemasi -->
+        <a href="index.html" class="logo-brand">
+          <img src="images/logo.png" alt="IBRAT SCHOOL Emblemasi" class="logo-img">
+          <div class="logo-text">
+            <h1>IBRAT SCHOOL</h1>
+            <span>Xususiy Maktabi</span>
+          </div>
+        </a>
+
+        <!-- Sahifalar havolasi -->
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link active">Bosh sahifa</a></li>
+          <li><a href="about.html" class="nav-link">Maktab haqida</a></li>
+          <li><a href="admissions.html" class="nav-link">Qabul</a></li>
+          <li><a href="programs.html" class="nav-link">Dasturlar</a></li>
+          <li><a href="news.html" class="nav-link">Yangiliklar</a></li>
+          <li><a href="contact.html" class="nav-link">Aloqa</a></li>
+        </ul>
+
+        <!-- "Qabul ochiq" tugmasi -->
+        <div class="nav-actions">
+          <button class="btn btn-primary btn-admission-badge open-admission-modal">
+            <span class="pulse-dot"></span>
+            Qabul ochiq
+          </button>
+          
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Menyuni ochish">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         3. HERO BO'LIMI (ASOSIY BANNER)
+         ========================================================================== -->
+    <section class="hero" style="background: linear-gradient(135deg, rgba(11, 31, 58, 0.94) 0%, rgba(15, 38, 77, 0.90) 100%), url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            2026–2027 o'quv yili uchun qabul ochiq!
+          </div>
+
+          <h1 class="hero-title">
+            IBRAT SCHOOL — <span>Kelajak yetakchilarini</span> tarbiyalaymiz
+          </h1>
+          <p class="hero-description">
+            1–11-sinflar uchun dushanbadan shanbagacha yuqori sifatli akademik ta'lim, chuqurlashtirilgan matematika, xalqaro Cambridge ingliz tili, IT va mustahkam axloqiy tarbiya maskani.
+          </p>
+
+          <div class="hero-buttons">
+            <button class="btn btn-primary btn-lg open-admission-modal">
+              <i class="fa-regular fa-paper-plane"></i>
+              Ariza topshirish
+            </button>
+            <a href="about.html" class="btn btn-outline-white btn-lg">
+              <i class="fa-regular fa-compass"></i>
+              Maktab bilan tanishing
+            </a>
+          </div>
+
+          <div class="hero-features-bar">
+            <div class="hero-feat-item">
+              <i class="fa-solid fa-calendar-check"></i>
+              <div>
+                <strong>Dushanba – Shanba</strong>
+                <span>6 kunlik to'liq ta'lim</span>
+              </div>
+            </div>
+            <div class="hero-feat-item">
+              <i class="fa-solid fa-utensils"></i>
+              <div>
+                <strong>3 mahal issiq taom</strong>
+                <span>Dietolog nazoratida</span>
+              </div>
+            </div>
+            <div class="hero-feat-item">
+              <i class="fa-solid fa-shield-halved"></i>
+              <div>
+                <strong>100% xavfsiz kampus</strong>
+                <span>24/7 qo'riqlash xizmati</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. YUTUQLAR STATISTIKASI (COUNTERS)
+         ========================================================================== -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-user-graduate"></i></div>
+            <div class="stat-number" data-target="1250" data-suffix="+">0</div>
+            <div class="stat-label">Baxtli o'quvchilar</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-trophy"></i></div>
+            <div class="stat-number" data-target="48" data-suffix="+">0</div>
+            <div class="stat-label">Xalqaro olimpiada g'oliblari</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+            <div class="stat-number" data-target="85" data-suffix="+">0</div>
+            <div class="stat-label">Tajribali va xorijiy ustozlar</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-building-columns"></i></div>
+            <div class="stat-number" data-target="99" data-suffix="%">0</div>
+            <div class="stat-label">OTMga grant bilan kirish</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. AFZALLIKLAR
+         ========================================================================== -->
+    <section class="section bg-alt">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-badge">Nega aynan IBRAT SCHOOL?</span>
+          <h2 class="section-title">Farzandingiz uchun mukammal ta'lim va tarbiya</h2>
+          <p class="section-subtitle">
+            Har bir o'quvchining ichki iqtidorini ro'yobga chiqarish va ularni jahon miqyosida raqobatbardosh qilib voyaga yetkazish bizning asosiy burchimizdir.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feat-icon-box"><i class="fa-solid fa-square-root-variable"></i></div>
+            <h3>Chuqurlashtirilgan Matematika</h3>
+            <p>Singapur metodikasi, mantiqiy masalalar va xalqaro olimpiadalarga individual tayyorgarlik kursi.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feat-icon-box"><i class="fa-solid fa-language"></i></div>
+            <h3>Ingliz tili (Cambridge & IELTS)</h3>
+            <p>Ona tili ingliz bo'lgan xorijiy o'qituvchilar (Native speakers) darslari va yuqori IELTS natijasi.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feat-icon-box"><i class="fa-solid fa-laptop-code"></i></div>
+            <h3>IT, Robototexnika va AI</h3>
+            <p>Dasturlash asoslari, sun'iy intellekt vositalari va robotlarni loyihalash bo'yicha zamonaviy laboratoriya.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feat-icon-box"><i class="fa-solid fa-person-swimming"></i></div>
+            <h3>Sport va Salomatlik</h3>
+            <p>Yopiq suzish havzasi, futbol maydoni, shaxmat maktabi va har kuni tibbiy hamda psixologik ko'rik.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. UNIVERSITETLAR
+         ========================================================================== -->
+    <section class="uni-section">
+      <div class="container">
+        <div class="section-title-wrap" style="margin-bottom: 30px;">
+          <span class="section-badge">Bizning faxrimiz</span>
+          <h2 class="section-title" style="font-size: 1.8rem;">Bitiruvchilarimiz qabul qilingan universitetlar</h2>
+        </div>
+        <div class="uni-grid">
+          <div class="uni-badge"><i class="fa-solid fa-landmark"></i> Harvard University</div>
+          <div class="uni-badge"><i class="fa-solid fa-landmark"></i> University of Oxford</div>
+          <div class="uni-badge"><i class="fa-solid fa-landmark"></i> Cambridge University</div>
+          <div class="uni-badge"><i class="fa-solid fa-graduation-cap"></i> WIUT (Vestminster)</div>
+          <div class="uni-badge"><i class="fa-solid fa-graduation-cap"></i> INHA University Tashkent</div>
+          <div class="uni-badge"><i class="fa-solid fa-graduation-cap"></i> Yangi O'zbekiston Universiteti</div>
+          <div class="uni-badge"><i class="fa-solid fa-graduation-cap"></i> TATU & O'zMU</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. SO'NGGI YANGILIKLAR (3 TA KARTA)
+         ========================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-badge">Maktab hayoti</span>
+          <h2 class="section-title">So'nggi yangiliklar va e'lonlar</h2>
+          <p class="section-subtitle">IBRAT SCHOOL jamoasining erishgan yutuqlari va maktabdagi yangiliklar.</p>
+        </div>
+
+        <div class="news-grid">
+          <article class="news-card">
+            <div class="news-img-wrap">
+              <span class="news-tag">G'alaba</span>
+              <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=700&q=80" alt="Olimpiada">
+            </div>
+            <div class="news-body">
+              <div class="news-meta">
+                <span><i class="fa-regular fa-calendar"></i> 25 Oktyabr, 2026</span>
+                <span><i class="fa-solid fa-tag"></i> Olimpiada</span>
+              </div>
+              <h3 class="news-title">
+                <a href="news.html">Xalqaro matematika olimpiadasida 4 ta oltin medal!</a>
+              </h3>
+              <p class="news-excerpt">
+                IBRAT SCHOOL o'quvchilari Singapurda o'tkazilgan SASMO olimpiadasida eng yuqori natijalarni qayd etishdi.
+              </p>
+              <a href="news.html" class="news-link">Batafsil o'qish <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <div class="news-img-wrap">
+              <span class="news-tag">STEM</span>
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80" alt="Robototexnika">
+            </div>
+            <div class="news-body">
+              <div class="news-meta">
+                <span><i class="fa-regular fa-calendar"></i> 18 Oktyabr, 2026</span>
+                <span><i class="fa-solid fa-tag"></i> Texnologiya</span>
+              </div>
+              <h3 class="news-title">
+                <a href="news.html">Yosh muhandislar: STEM va Robototexnika ko'rgazmasi</a>
+              </h3>
+              <p class="news-excerpt">
+                O'quvchilarimiz tomonidan yaratilgan aqlli shahar va sun'iy intellekt loyihalari ota-onalarda katta qiziqish uyg'otdi.
+              </p>
+              <a href="news.html" class="news-link">Batafsil o'qish <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <div class="news-img-wrap">
+              <span class="news-tag">Madaniyat</span>
+              <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=700&q=80" alt="Kutubxona">
+            </div>
+            <div class="news-body">
+              <div class="news-meta">
+                <span><i class="fa-regular fa-calendar"></i> 10 Oktyabr, 2026</span>
+                <span><i class="fa-solid fa-tag"></i> Kitobxonlik</span>
+              </div>
+              <h3 class="news-title">
+                <a href="news.html">Kitobxonlik haftaligi va yozuvchilar bilan samimiy suhbat</a>
+              </h3>
+              <p class="news-excerpt">
+                O'quvchilarimiz taniqli adiblar bilan uchrashib, kitob mutolaasi va badiiy tafakkur sirlari haqida o'rtoqlashdilar.
+              </p>
+              <a href="news.html" class="news-link">Batafsil o'qish <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         8. OTA-ONALAR FIKRLARI (SLAYDER)
+         ========================================================================== -->
+    <section class="testimonials-section">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-badge" style="background: rgba(255,255,255,0.15); color: #fbbf24;">Ota-onalar fikri</span>
+          <h2 class="section-title">Ota-onalar IBRAT SCHOOL haqida nima deydi?</h2>
+          <p class="section-subtitle">Eng katta mukofotimiz — farzandlar quvonchi va ota-onalar ishonchi.</p>
+        </div>
+
+        <div class="slider-wrapper">
+          <div class="testimonial-track" id="testimonialTrack">
+            <div class="testimonial-slide active">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  "O'g'limiz IBRAT SCHOOL'ga o'tganidan beri darslarga katta ishtiyoq bilan bormoqda. Ayniqsa, dushanbadan shanbagacha darslar to'liq tashkil etilgani va barcha uy vazifalari maktabning o'zida bajarilishi biz uchun juda qulay!"
+                </p>
+                <div class="testimonial-author">
+                  <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" alt="Nargiza Rahimova" class="author-avatar">
+                  <div class="author-info">
+                    <h4>Nargiza Rahimova</h4>
+                    <span>4-"A" sinf o'quvchisi onasi</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  "Maktabdagi xavfsizlik, toza va to'yimli 3 mahal taom hamda robototexnika to'garagi juda yuqori darajada. Ustozlarning har bir bolaga alohida mehr bilan yondashishi tahsinga loyiq."
+                </p>
+                <div class="testimonial-author">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Akmal Rustamov" class="author-avatar">
+                  <div class="author-info">
+                    <h4>Akmal Rustamov</h4>
+                    <span>7-"B" sinf o'quvchisi otasi</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  "Qizim 9-sinfni tamomlab, ingliz tili IELTS imtihonidan 7.5 natijani qo'lga kiritdi. IBRAT SCHOOL jamoasiga samimiy minnatdorchiligimni bildiraman!"
+                </p>
+                <div class="testimonial-author">
+                  <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Dildora Umarova" class="author-avatar">
+                  <div class="author-info">
+                    <h4>Dildora Umarova</h4>
+                    <span>9-"C" sinf o'quvchisi onasi</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-controls">
+            <button class="slider-btn" id="sliderPrev" aria-label="Oldingi"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="slider-dots" id="sliderDots"></div>
+            <button class="slider-btn" id="sliderNext" aria-label="Keyingi"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         9. CTA CHAQIRUV BLOKI
+         ========================================================================== -->
+    <section class="section" style="background-color: var(--bg-alt); text-align: center;">
+      <div class="container">
+        <div style="max-width: 750px; margin: 0 auto; background: #ffffff; padding: 50px 30px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); border: 2px dashed var(--accent);">
+          <span class="section-badge">Qabul 2026–2027</span>
+          <h2 style="font-size: 2.2rem; margin-bottom: 16px;">Farzandingiz kelajagiga bugun to'g'ri poydevor qo'ying</h2>
+          <p style="color: var(--text-muted); margin-bottom: 30px; font-size: 1.05rem;">
+            Onlayn ariza qoldiring yoki bizga qo'ng'iroq qiling: <strong>+998 (94) 702-44-56</strong>
+          </p>
+          <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            <button class="btn btn-primary btn-lg open-admission-modal">
+              <i class="fa-solid fa-pen-to-square"></i>
+              Onlayn ariza topshirish
+            </button>
+            <a href="https://t.me/ibrat_schools" target="_blank" class="btn btn-secondary btn-lg">
+              <i class="fa-brands fa-telegram" style="color: #0088cc;"></i>
+              Telegram kanalimiz
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       10. DOIMIY QABUL TUGMASI
+       ========================================================================== -->
+  <button class="floating-admission-btn open-admission-modal" aria-label="Qabulga ariza topshirish">
+    <span class="pulse-dot"></span>
+    <span>Qabul ochiq</span>
+  </button>
+
+  <!-- ==========================================================================
+       11. IBRAT AI MASLAHATCHISI (AI CHATBOT WIDGET)
+       ========================================================================== -->
+  <button class="ai-chat-btn" id="aiChatBtn" aria-label="AI Yordamchi bilan suhbat">
+    <div class="ai-icon-sparkle">
+      <i class="fa-solid fa-wand-magic-sparkles"></i>
+    </div>
+    <span>IBRAT AI</span>
+  </button>
+
+  <div class="ai-chat-window" id="aiChatWindow">
+    <div class="ai-chat-header">
+      <div class="ai-header-profile">
+        <img src="images/logo-square.png" alt="IBRAT AI" class="ai-avatar">
+        <div>
+          <div class="ai-header-title">IBRAT AI Maslahatchi</div>
+          <div class="ai-header-status">
+            <span class="ai-status-dot"></span> Online yordamchi
+          </div>
+        </div>
+      </div>
+      <button class="ai-close-btn" id="aiCloseBtn" aria-label="Yopish">&times;</button>
+    </div>
+
+    <div class="ai-chat-body" id="aiMessages">
+      <div class="ai-message ai-msg-bot">
+        <div class="ai-bubble">
+          Assalomu alaykum! Men <b>IBRAT SCHOOL</b> sun'iy intellekt maslahatchisiman. Maktabimiz, qabul, dars kunlari va narxlar haqida savollaringizga mamnuniyat bilan javob beraman.
+        </div>
+        <div class="ai-msg-time">Hozir</div>
+      </div>
+
+      <!-- Tezkor savollar -->
+      <div class="ai-quick-questions">
+        <button class="ai-quick-btn" data-question="O'qish kunlari qaysi kunlar?">📅 O'qish kunlari</button>
+        <button class="ai-quick-btn" data-question="Qabul shartlari va arizalar">🎓 Qabul qanday bo'ladi?</button>
+        <button class="ai-quick-btn" data-question="O'qish narxi qancha?">💰 O'qish narxlari</button>
+        <button class="ai-quick-btn" data-question="Chuqurlashtirilgan fanlar">📚 Chuqur fanlar</button>
+        <button class="ai-quick-btn" data-question="Telefon va manzil">📞 Telefon & Manzil</button>
+      </div>
+    </div>
+
+    <form class="ai-chat-footer" id="aiChatForm">
+      <input type="text" class="ai-input" id="aiInput" placeholder="Savolingizni yozing..." required autocomplete="off">
+      <button type="submit" class="ai-send-btn" aria-label="Yuborish">
+        <i class="fa-solid fa-paper-plane"></i>
+      </button>
+    </form>
+  </div>
+
+  <div class="back-to-top" id="backToTop" title="Tepaga chiqish">
+    <i class="fa-solid fa-arrow-up"></i>
+  </div>
+
+  <!-- ==========================================================================
+       12. FOOTER (PASTKI QISM)
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col footer-about">
+          <div class="logo-brand" style="margin-bottom: 20px;">
+            <img src="images/logo.png" alt="IBRAT SCHOOL" class="logo-img">
+            <div class="logo-text">
+              <h2 style="color: #fff; font-size: 1.35rem;">IBRAT SCHOOL</h2>
+              <span style="color: var(--accent-light);">Xususiy Maktabi</span>
+            </div>
+          </div>
+          <p>
+            Har bir o'quvchining ichki salohiyatini ochishga va ularni dunyo miqyosidagi yuksak marralarga tayyorlashga mo'ljallangan zamonaviy maktab.
+          </p>
+          <div class="footer-social">
+            <a href="https://t.me/ibrat_schools" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://instagram.com/ibrat_schooll" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Tezkor havolalar</h3>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Bosh sahifa</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> Maktab haqida</a></li>
+            <li><a href="admissions.html"><i class="fa-solid fa-angle-right"></i> Qabul shartlari</a></li>
+            <li><a href="programs.html"><i class="fa-solid fa-angle-right"></i> Ta'lim dasturlari</a></li>
+            <li><a href="news.html"><i class="fa-solid fa-angle-right"></i> Yangiliklar</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Aloqa</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Ta'lim dasturlari</h3>
+          <ul class="footer-links">
+            <li><a href="programs.html#primaryTab"><i class="fa-solid fa-angle-right"></i> Boshlang'ich (1–4)</a></li>
+            <li><a href="programs.html#middleTab"><i class="fa-solid fa-angle-right"></i> O'rta maktab (5–9)</a></li>
+            <li><a href="programs.html#highTab"><i class="fa-solid fa-angle-right"></i> Yuqori maktab (10–11)</a></li>
+            <li><a href="programs.html"><i class="fa-solid fa-angle-right"></i> Cambridge English</a></li>
+            <li><a href="programs.html"><i class="fa-solid fa-angle-right"></i> Robototexnika</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Bog'lanish</h3>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Yangiyer sh., Loyihachilar ko'chasi 2-uy</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+998947024456" style="color:inherit; font-weight:700;">+998 (94) 702-44-56</a>
+            </li>
+            <li>
+              <i class="fa-regular fa-calendar-days"></i>
+              <span>Dushanba – Shanba: 08:00 – 18:00</span>
+            </li>
+            <li>
+              <i class="fa-brands fa-telegram"></i>
+              <a href="https://t.me/ibrat_schools" target="_blank" style="color: var(--accent-light);">@ibrat_schools</a>
+            </li>
+            <li>
+              <i class="fa-brands fa-instagram"></i>
+              <a href="https://instagram.com/ibrat_schooll" target="_blank" style="color: var(--accent-light);">@ibrat_schooll</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 IBRAT SCHOOL xususiy maktabi. Barcha huquqlar himoyalangan.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       13. TEZKOR QABUL MODALI (POPUP)
+       ========================================================================== -->
+  <div class="modal-overlay" id="admissionModal">
+    <div class="modal-box" style="max-width: 600px; text-align: left;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h3 style="color: var(--primary); font-size: 1.4rem;">
+          <i class="fa-solid fa-file-pen" style="color: var(--accent); margin-right: 8px;"></i>
+          IBRAT SCHOOL — Qabul arizasi
+        </h3>
+        <button class="close-modal" style="background: none; border: none; font-size: 1.6rem; cursor: pointer; color: var(--text-muted);">&times;</button>
+      </div>
+
+      <form id="quickAdmissionForm" class="ajax-form">
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Bola F.I.SH *</label>
+            <input type="text" class="form-control" placeholder="Masalan: Azizbek Aliyev" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tug'ilgan sanasi *</label>
+            <input type="date" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Topshirmoqchi bo'lgan sinfi *</label>
+            <select class="form-control" required>
+              <option value="">Sinfni tanlang...</option>
+              <option value="1">1-sinf (Boshlang'ich)</option>
+              <option value="2">2-sinf</option>
+              <option value="3">3-sinf</option>
+              <option value="4">4-sinf</option>
+              <option value="5">5-sinf (O'rta)</option>
+              <option value="6">6-sinf</option>
+              <option value="7">7-sinf</option>
+              <option value="8">8-sinf</option>
+              <option value="9">9-sinf</option>
+              <option value="10">10-sinf (Yuqori)</option>
+              <option value="11">11-sinf</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Ota-onaning F.I.SH *</label>
+            <input type="text" class="form-control" placeholder="Ota yoki onaning ismi" required>
+          </div>
+          <div class="form-group full-width">
+            <label class="form-label">Telefon raqam *</label>
+            <input type="tel" class="form-control" placeholder="+998 (94) 702-44-56" required>
+          </div>
+          <div class="form-group full-width">
+            <label class="form-label">Qo'shimcha izoh yoki savolingiz</label>
+            <textarea class="form-control" style="min-height: 80px;" placeholder="Farzandingiz qiziqishlari yoki savollaringiz bo'lsa yozing..."></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 15px;">
+          <i class="fa-solid fa-paper-plane"></i> Arizani yuborish
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- SUCCESS MODAL -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal-box">
+      <div class="modal-icon-success">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <h3 class="modal-title">Rahmat, arizangiz qabul qilindi!</h3>
+      <p class="modal-desc">
+        Sizning ma'lumotlaringiz IBRAT SCHOOL qabul komissiyasiga yetib bordi. Tez orada mutaxassisimiz <b>+998 (94) 702-44-56</b> orqali siz bilan bog'lanadi.
+      </p>
+      <button class="btn btn-primary close-modal" style="width: 100%;">
+        Tushunarli, rahmat!
+      </button>
+    </div>
+  </div>
+
+  <!-- Asosiy JS Skripti -->
+  <script src="js/main.js"></script>
+</body>
+</html>
