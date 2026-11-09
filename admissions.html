@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="uz">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Qabul 2026–2027 — IBRAT SCHOOL</title>
-  <meta name="description" content="IBRAT SCHOOL xususiy maktabiga qabul shartlari, kerakli hujjatlar, imtihon sanalari, ta'lim narxlari va onlayn ariza formasi.">
+  <meta name="description" content="IBRAT SCHOOL xususiy maktabiga qabul shartlari, kerakli hujjatlar, imtihon sanalari va onlayn ariza formasi.">
   
   <link rel="icon" type="image/png" href="images/logo-square.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,11 +25,11 @@
         </div>
         <div class="topbar-item">
           <i class="fa-regular fa-calendar-days"></i>
-          <span>Dushanba – Shanba: 08:00 – 18:00</span>
+          <span data-i18n="top_schedule">Dushanba – Shanba: 09:00 – 18:00 (Darslar 09:00 da boshlanadi)</span>
         </div>
         <div class="topbar-item">
           <i class="fa-solid fa-location-dot"></i>
-          <span>Yangiyer sh., Loyihachilar ko'chasi 2-uy</span>
+          <span data-i18n="top_address">Yangiyer sh., Loyihachilar ko'chasi 2-uy</span>
         </div>
       </div>
       <div class="topbar-actions">
@@ -39,10 +39,8 @@
           <button class="lang-btn" data-lang="en">EN</button>
         </div>
         <div class="topbar-social">
-          <a href="https://t.me/ibrat_schools" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-          <a href="https://instagram.com/ibrat_schooll" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-          <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://t.me/ibrat_schools" target="_blank" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          <a href="https://instagram.com/ibrat_schooll" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
         </div>
       </div>
     </div>
@@ -61,18 +59,18 @@
         </a>
 
         <ul class="nav-menu" id="navMenu">
-          <li><a href="index.html" class="nav-link">Bosh sahifa</a></li>
-          <li><a href="about.html" class="nav-link">Maktab haqida</a></li>
-          <li><a href="admissions.html" class="nav-link active">Qabul</a></li>
-          <li><a href="programs.html" class="nav-link">Dasturlar</a></li>
-          <li><a href="news.html" class="nav-link">Yangiliklar</a></li>
-          <li><a href="contact.html" class="nav-link">Aloqa</a></li>
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Bosh sahifa</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">Maktab haqida</a></li>
+          <li><a href="admissions.html" class="nav-link active" data-i18n="nav_admissions">Qabul</a></li>
+          <li><a href="programs.html" class="nav-link" data-i18n="nav_programs">Dasturlar</a></li>
+          <li><a href="news.html" class="nav-link" data-i18n="nav_news">Yangiliklar</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Aloqa</a></li>
         </ul>
 
         <div class="nav-actions">
           <button class="btn btn-primary btn-admission-badge open-admission-modal">
             <span class="pulse-dot"></span>
-            Qabul ochiq
+            <span data-i18n="btn_admission">Qabul ochiq</span>
           </button>
           <button class="mobile-toggle" id="mobileToggle" aria-label="Menyuni ochish">
             <i class="fa-solid fa-bars"></i>
@@ -87,9 +85,9 @@
     <div class="container">
       <h1>Qabul 2026–2027</h1>
       <div class="breadcrumbs">
-        <a href="index.html">Bosh sahifa</a>
+        <a href="index.html" data-i18n="nav_home">Bosh sahifa</a>
         <span>/</span>
-        <span>IBRAT SCHOOL qabul jarayoni</span>
+        <span data-i18n="nav_admissions">IBRAT SCHOOL qabul jarayoni</span>
       </div>
     </div>
   </section>
@@ -116,7 +114,7 @@
             <div class="step-number">02</div>
             <div class="step-icon"><i class="fa-solid fa-clipboard-check"></i></div>
             <h3>Sinov imtihoni</h3>
-            <p>Matematika, ingliz tili va mantiq bo'yicha test topshiriladi hamda psixolog bilan suhbat o'tkaziladi.</p>
+            <p>Matematika, ingliz tili va mantiq bo'yicha test topshiriladi hamda suhbat o'tkaziladi.</p>
           </div>
 
           <div class="step-card">
@@ -221,7 +219,7 @@
               <tr>
                 <td><strong>1-sinf (Tayyorlov)</strong></td>
                 <td>Har shanba kunlari</td>
-                <td>Mantiqiy o'yinlar, nutq va psixologik suhbat</td>
+                <td>Mantiqiy o'yinlar, nutq va suhbat</td>
                 <td>10:00 – 12:00</td>
                 <td>Bosh bino, 102-xona</td>
               </tr>
@@ -236,14 +234,14 @@
                 <td><strong>5–9-sinflar (O'rta)</strong></td>
                 <td>May, Iyun, Avgust (Shanba)</td>
                 <td>Matematika, Mantiq, Ingliz tili (yozma/og'zaki)</td>
-                <td>09:00 – 12:30</td>
+                <td>09:30 – 12:30</td>
                 <td>Konferens zal</td>
               </tr>
               <tr>
                 <td><strong>10–11-sinflar (Yuqori)</strong></td>
                 <td>May, Iyun, Avgust (Shanba)</td>
                 <td>Matematika, Ingliz tili (IELTS formati), Tanlov fani</td>
-                <td>09:00 – 13:00</td>
+                <td>09:30 – 13:00</td>
                 <td>IT laboratoriya</td>
               </tr>
             </tbody>
@@ -252,76 +250,38 @@
       </div>
     </section>
 
-    <!-- NARXLAR JADVALI -->
+    <!-- MAKTAB IMKONIYATLARI VA SHAROITLARI (NARXLAR BUTUNLAY OLIB TASHLANDI!) -->
     <section class="section bg-alt">
       <div class="container">
         <div class="section-title-wrap">
-          <span class="section-badge">Shaffof narxlar</span>
-          <h2 class="section-title">Ta'lim narxlari va qulay shartlar</h2>
-          <p class="section-subtitle">Barcha to'garaklar, 3 mahal ovqat va qulayliklar kiritilgan to'liq paket.</p>
+          <span class="section-badge">Imtiyozlar va sharoitlar</span>
+          <h2 class="section-title">O'quvchilarimiz uchun yaratilgan qulayliklar</h2>
+          <p class="section-subtitle">IBRAT SCHOOL'da ta'lim to'liq qamrovli sharoitlar bilan ta'minlangan.</p>
         </div>
 
-        <div class="pricing-grid">
-          <!-- Boshlang'ich -->
-          <div class="pricing-card">
-            <div class="pricing-header">
-              <h3 class="pricing-grade">Boshlang'ich maktab</h3>
-              <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 12px;">1–4-sinflar uchun</div>
-              <div class="pricing-price">
-                3 200 000 <span>so'm / oy</span>
-              </div>
-            </div>
-            <ul class="pricing-features">
-              <li><i class="fa-solid fa-circle-check"></i> <b>Dushanba – Shanba (haftada 6 kun)</b></li>
-              <li><i class="fa-solid fa-circle-check"></i> Kun tartibi: 08:00 dan 18:00 gacha</li>
-              <li><i class="fa-solid fa-circle-check"></i> 3 mahal issiq va to'yimli taom</li>
-              <li><i class="fa-solid fa-circle-check"></i> Barcha uy vazifalarini maktabda bajarish</li>
-              <li><i class="fa-solid fa-circle-check"></i> Ingliz tili, Shaxmat va Suzish</li>
-              <li><i class="fa-solid fa-circle-check"></i> Shifokor va psixolog nazorati</li>
-            </ul>
-            <button class="btn btn-secondary open-admission-modal">Ariza topshirish</button>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feat-icon-box"><i class="fa-solid fa-clock"></i></div>
+            <h3>Qulay kun tartibi</h3>
+            <p>Darslar dushanbadan shanbagacha soat 09:00 da boshlanadi va 18:00 gacha unumli davom etadi.</p>
           </div>
 
-          <!-- O'rta maktab -->
-          <div class="pricing-card featured">
-            <span class="pricing-badge">Eng ommabop</span>
-            <div class="pricing-header">
-              <h3 class="pricing-grade">O'rta maktab</h3>
-              <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 12px;">5–9-sinflar uchun</div>
-              <div class="pricing-price">
-                3 600 000 <span>so'm / oy</span>
-              </div>
-            </div>
-            <ul class="pricing-features">
-              <li><i class="fa-solid fa-circle-check"></i> <b>Dushanba – Shanba (haftada 6 kun)</b></li>
-              <li><i class="fa-solid fa-circle-check"></i> Kun tartibi: 08:00 dan 18:00 gacha</li>
-              <li><i class="fa-solid fa-circle-check"></i> 3 mahal muvozanatli issiq taom</li>
-              <li><i class="fa-solid fa-circle-check"></i> Chuqurlashtirilgan Matematika & STEM</li>
-              <li><i class="fa-solid fa-circle-check"></i> Cambridge English (Native speakers)</li>
-              <li><i class="fa-solid fa-circle-check"></i> Robototexnika va Dasturlash (IT)</li>
-              <li><i class="fa-solid fa-circle-check"></i> Olimpiadalarga individual tayyorgarlik</li>
-            </ul>
-            <button class="btn btn-primary open-admission-modal">Ariza topshirish</button>
+          <div class="feature-card">
+            <div class="feat-icon-box"><i class="fa-solid fa-utensils"></i></div>
+            <h3>3 mahal sifatli taom</h3>
+            <p>O'quvchilar uchun sifatli va vitaminlarga boy, shifokor-dietolog nazoratidagi issiq taomlar.</p>
           </div>
 
-          <!-- Yuqori maktab -->
-          <div class="pricing-card">
-            <div class="pricing-header">
-              <h3 class="pricing-grade">Yuqori maktab</h3>
-              <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 12px;">10–11-sinflar uchun</div>
-              <div class="pricing-price">
-                3 900 000 <span>so'm / oy</span>
-              </div>
-            </div>
-            <ul class="pricing-features">
-              <li><i class="fa-solid fa-circle-check"></i> <b>Dushanba – Shanba (haftada 6 kun)</b></li>
-              <li><i class="fa-solid fa-circle-check"></i> Kun tartibi: 08:00 dan 18:00 gacha</li>
-              <li><i class="fa-solid fa-circle-check"></i> 3 mahal issiq taom va tamaddi</li>
-              <li><i class="fa-solid fa-circle-check"></i> IELTS & SAT xalqaro imtihonlar kursi</li>
-              <li><i class="fa-solid fa-circle-check"></i> Universitetlarga grant kafolati</li>
-              <li><i class="fa-solid fa-circle-check"></i> Kasbga yo'naltirish va mentorlik</li>
-            </ul>
-            <button class="btn btn-secondary open-admission-modal">Ariza topshirish</button>
+          <div class="feature-card">
+            <div class="feat-icon-box"><i class="fa-solid fa-book-open"></i></div>
+            <h3>Barcha darslik va qo'llanmalar</h3>
+            <p>Cambridge darsliklari, qo'shimcha o'quv qo'llanmalari va badiiy adabiyotlar to'liq taqdim etiladi.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feat-icon-box"><i class="fa-solid fa-award"></i></div>
+            <h3>To'garaklar va sport</h3>
+            <p>Suzish, futbol, shaxmat, tasviriy san'at va IT mashg'ulotlari har bir o'quvchi uchun mavjud.</p>
           </div>
         </div>
       </div>
@@ -386,7 +346,7 @@
 
               <div style="margin-top: 25px; text-align: center;">
                 <button type="submit" class="btn btn-primary btn-lg" style="min-width: 250px;">
-                  <i class="fa-solid fa-paper-plane"></i> Arizani yuborish
+                  <i class="fa-solid fa-paper-plane"></i> <span data-i18n="modal_btn_submit">Arizani yuborish</span>
                 </button>
               </div>
             </form>
@@ -407,11 +367,11 @@
         <div class="faq-wrap">
           <div class="accordion-item">
             <div class="accordion-header">
-              <span>1. IBRAT SCHOOL'da o'qish qaysi kunlari bo'ladi?</span>
+              <span>1. IBRAT SCHOOL'da darslar soat nechada boshlanadi?</span>
               <i class="fa-solid fa-chevron-down accordion-icon"></i>
             </div>
             <div class="accordion-body">
-              Maktabimizda o'quv haftasi <b>dushanbadan shanbagacha (haftada 6 kun)</b> davom etadi. Soat 08:00 dan 18:00 gacha darslar, 3 mahal ovqat, to'garaklar va barcha uy vazifalarini maktabda bajarish to'liq qamrab olingan.
+              Maktabimizda darslar har kuni <b>soat 09:00 da</b> boshlanadi va 18:00 gacha davom etadi. Darslar dushanbadan shanbagacha haftada 6 kun bo'lib o'tadi.
             </div>
           </div>
 
@@ -431,17 +391,17 @@
               <i class="fa-solid fa-chevron-down accordion-icon"></i>
             </div>
             <div class="accordion-body">
-              O'quvchilar matematika va ingliz tili fanlaridan test topshiradilar hamda mantiqiy fikrlash bo'yicha mutaxassislar bilan suhbatdan o'tadilar.
+              O'quvchilar matematika va ingliz tili fanlaridan test topshiradilar hamda mantiqiy fikrlash bo'yicha suhbatdan o'tadilar.
             </div>
           </div>
 
           <div class="accordion-item">
             <div class="accordion-header">
-              <span>4. To'lovda chegirmalar mavjudmi?</span>
+              <span>4. To'lov shartlari va chegirmalar qanday?</span>
               <i class="fa-solid fa-chevron-down accordion-icon"></i>
             </div>
             <div class="accordion-body">
-              Bir oiladan 2 yoki undan ortiq farzand o'qisa, 10% dan 15% gacha chegirma taqdim etiladi. Shuningdek, xalqaro olimpiada g'oliblariga maxsus grantlar ajratiladi.
+              To'lov shartlari, oilaviy chegirmalar hamda olimpiada sovrindorlari uchun grantlar bo'yicha ma'lumot olish uchun qabul komissiyamizga qo'ng'iroq qilishingiz mumkin: <b>+998 (94) 702-44-56</b>.
             </div>
           </div>
         </div>
@@ -452,7 +412,7 @@
   <!-- DOIMIY TUGMA -->
   <button class="floating-admission-btn open-admission-modal">
     <span class="pulse-dot"></span>
-    <span>Qabul ochiq</span>
+    <span data-i18n="btn_admission">Qabul ochiq</span>
   </button>
 
   <!-- IBRAT AI WIDGET -->
@@ -474,14 +434,14 @@
     </div>
     <div class="ai-chat-body" id="aiMessages">
       <div class="ai-message ai-msg-bot">
-        <div class="ai-bubble">Assalomu alaykum! Men <b>IBRAT SCHOOL</b> sun'iy intellekt maslahatchisiman. Qabul yoki narxlar bo'yicha savollaringiz bormi?</div>
+        <div class="ai-bubble">Assalomu alaykum! Men <b>IBRAT SCHOOL</b> sun'iy intellekt maslahatchisiman. Darslarimiz soat 09:00 da boshlanadi. Qabul bo'yicha savollaringiz bormi?</div>
         <div class="ai-msg-time">Hozir</div>
       </div>
       <div class="ai-quick-questions">
-        <button class="ai-quick-btn" data-question="O'qish kunlari qaysi kunlar?">📅 O'qish kunlari</button>
+        <button class="ai-quick-btn" data-question="Darslar qaysi kunlari va soat nechada?">📅 O'qish kunlari & 09:00</button>
         <button class="ai-quick-btn" data-question="Qabul shartlari va arizalar">🎓 Qabul qanday bo'ladi?</button>
-        <button class="ai-quick-btn" data-question="O'qish narxi qancha?">💰 O'qish narxlari</button>
-        <button class="ai-quick-btn" data-question="Telefon va manzil">📞 Telefon & Manzil</button>
+        <button class="ai-quick-btn" data-question="Maktabda qanday sharoitlar bor?">⭐ Sharoitlar va qulayliklar</button>
+        <button class="ai-quick-btn" data-question="Telefon va manzil">📞 Telefon & Yangiyer</button>
       </div>
     </div>
     <form class="ai-chat-footer" id="aiChatForm">
@@ -492,7 +452,7 @@
 
   <div class="back-to-top" id="backToTop"><i class="fa-solid fa-arrow-up"></i></div>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (Facebook va YouTube olib tashlangan!) -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-top">
@@ -504,41 +464,39 @@
               <span style="color: var(--accent-light);">Xususiy Maktabi</span>
             </div>
           </div>
-          <p>Har bir o'quvchining ichki salohiyatini ochishga va ularni dunyo miqyosidagi yuksak marralarga tayyorlashga mo'ljallangan zamonaviy maktab.</p>
+          <p data-i18n="footer_about_text">Har bir o'quvchining ichki salohiyatini ochishga va ularni dunyo miqyosidagi yuksak marralarga tayyorlashga mo'ljallangan zamonaviy maktab.</p>
           <div class="footer-social">
-            <a href="https://t.me/ibrat_schools" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-            <a href="https://instagram.com/ibrat_schooll" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://t.me/ibrat_schools" target="_blank" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://instagram.com/ibrat_schooll" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
           </div>
         </div>
         <div class="footer-col">
-          <h3>Tezkor havolalar</h3>
+          <h3 data-i18n="footer_links_title">Tezkor havolalar</h3>
           <ul class="footer-links">
-            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> Bosh sahifa</a></li>
-            <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> Maktab haqida</a></li>
-            <li><a href="admissions.html"><i class="fa-solid fa-angle-right"></i> Qabul shartlari</a></li>
-            <li><a href="programs.html"><i class="fa-solid fa-angle-right"></i> Ta'lim dasturlari</a></li>
-            <li><a href="news.html"><i class="fa-solid fa-angle-right"></i> Yangiliklar</a></li>
-            <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Aloqa</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> <span data-i18n="nav_home">Bosh sahifa</span></a></li>
+            <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> <span data-i18n="nav_about">Maktab haqida</span></a></li>
+            <li><a href="admissions.html"><i class="fa-solid fa-angle-right"></i> <span data-i18n="nav_admissions">Qabul shartlari</span></a></li>
+            <li><a href="programs.html"><i class="fa-solid fa-angle-right"></i> <span data-i18n="nav_programs">Ta'lim dasturlari</span></a></li>
+            <li><a href="news.html"><i class="fa-solid fa-angle-right"></i> <span data-i18n="nav_news">Yangiliklar</span></a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> <span data-i18n="nav_contact">Aloqa</span></a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3>Ta'lim dasturlari</h3>
+          <h3 data-i18n="footer_programs_title">Ta'lim dasturlari</h3>
           <ul class="footer-links">
             <li><a href="programs.html#primaryTab"><i class="fa-solid fa-angle-right"></i> Boshlang'ich (1–4)</a></li>
             <li><a href="programs.html#middleTab"><i class="fa-solid fa-angle-right"></i> O'rta maktab (5–9)</a></li>
             <li><a href="programs.html#highTab"><i class="fa-solid fa-angle-right"></i> Yuqori maktab (10–11)</a></li>
             <li><a href="programs.html"><i class="fa-solid fa-angle-right"></i> Cambridge English</a></li>
-            <li><a href="programs.html"><i class="fa-solid fa-angle-right"></i> Robototexnika</a></li>
+            <li><a href="programs.html"><i class="fa-solid fa-angle-right"></i> IT & Dasturlash</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3>Bog'lanish</h3>
+          <h3 data-i18n="footer_contact_title">Bog'lanish</h3>
           <ul class="footer-contact-list">
             <li><i class="fa-solid fa-location-dot"></i><span>Yangiyer sh., Loyihachilar ko'chasi 2-uy</span></li>
             <li><i class="fa-solid fa-phone"></i><a href="tel:+998947024456" style="color:inherit; font-weight:700;">+998 (94) 702-44-56</a></li>
-            <li><i class="fa-regular fa-calendar-days"></i><span>Dushanba – Shanba: 08:00 – 18:00</span></li>
+            <li><i class="fa-regular fa-calendar-days"></i><span>Dushanba – Shanba: 09:00 – 18:00 (Darslar 09:00 da boshlanadi)</span></li>
             <li><i class="fa-brands fa-telegram"></i><a href="https://t.me/ibrat_schools" target="_blank" style="color: var(--accent-light);">@ibrat_schools</a></li>
             <li><i class="fa-brands fa-instagram"></i><a href="https://instagram.com/ibrat_schooll" target="_blank" style="color: var(--accent-light);">@ibrat_schooll</a></li>
           </ul>
@@ -556,7 +514,7 @@
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
         <h3 style="color: var(--primary); font-size: 1.4rem;">
           <i class="fa-solid fa-file-pen" style="color: var(--accent); margin-right: 8px;"></i>
-          IBRAT SCHOOL — Qabul arizasi
+          <span data-i18n="modal_title">IBRAT SCHOOL — Qabul arizasi</span>
         </h3>
         <button class="close-modal" style="background: none; border: none; font-size: 1.6rem; cursor: pointer; color: var(--text-muted);">&times;</button>
       </div>
@@ -601,7 +559,7 @@
           </div>
         </div>
         <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 15px;">
-          <i class="fa-solid fa-paper-plane"></i> Arizani yuborish
+          <i class="fa-solid fa-paper-plane"></i> <span data-i18n="modal_btn_submit">Arizani yuborish</span>
         </button>
       </form>
     </div>
@@ -611,8 +569,8 @@
   <div class="modal-overlay" id="successModal">
     <div class="modal-box">
       <div class="modal-icon-success"><i class="fa-solid fa-circle-check"></i></div>
-      <h3 class="modal-title">Rahmat, arizangiz qabul qilindi!</h3>
-      <p class="modal-desc">Sizning ma'lumotlaringiz IBRAT SCHOOL qabul komissiyasiga yetib bordi. Tez orada mutaxassisimiz siz bilan bog'lanadi.</p>
+      <h3 class="modal-title" data-i18n="success_title">Rahmat, arizangiz qabul qilindi!</h3>
+      <p class="modal-desc" data-i18n="success_desc">Sizning ma'lumotlaringiz IBRAT SCHOOL qabul komissiyasiga yetib bordi. Tez orada mutaxassisimiz siz bilan bog'lanadi.</p>
       <button class="btn btn-primary close-modal" style="width: 100%;">Tushunarli, rahmat!</button>
     </div>
   </div>

@@ -1,14 +1,238 @@
 /**
- * ZIYO NUR XUSUSIY MAKTABI - ASOSIY JAVASCRIPT FAYLI (MAIN.JS)
+ * IBRAT SCHOOL — ASOSIY JAVASCRIPT VA i18n KO'P TILLILIK TIZIMI (MAIN.JS)
  * Muallif: Antigravity AI
- * Tavsif: Mobil menyu, til almashtirish, animatsiyali raqamlar, fikrlar slayderi,
- *         tablar, FAQ akordeoni, galereya filtri, lightbox va forma yuborish logikasi.
+ * Tillar: O'zbekcha (UZ), Ruscha (RU), Inglizcha (EN) — to'liq ishlaydi!
  */
 
 document.addEventListener('DOMContentLoaded', () => {
 
   // ==========================================================================
-  // 1. MOBIL MENYU (HAMBURGER MENU)
+  // 1. i18n LUG'ATI VA KO'P TILLILIK TIZIMI (UZ / RU / EN)
+  // ==========================================================================
+  const translations = {
+    uz: {
+      top_schedule: "Dushanba – Shanba: 09:00 – 18:00 (Darslar 09:00 da boshlanadi)",
+      top_address: "Yangiyer sh., Loyihachilar ko'chasi 2-uy",
+      nav_home: "Bosh sahifa",
+      nav_about: "Maktab haqida",
+      nav_admissions: "Qabul",
+      nav_programs: "Dasturlar",
+      nav_news: "Yangiliklar",
+      nav_contact: "Aloqa",
+      btn_admission: "Qabul ochiq",
+      hero_badge: "2026–2027 o'quv yili uchun qabul ochiq!",
+      hero_title: "IBRAT SCHOOL — Kelajak yetakchilarini tarbiyalaymiz",
+      hero_desc: "1–11-sinflar uchun dushanbadan shanbagacha yuqori sifatli akademik ta'lim, chuqurlashtirilgan matematika, xalqaro Cambridge ingliz tili, IT va mustahkam axloqiy tarbiya maskani.",
+      hero_btn_apply: "Ariza topshirish",
+      hero_btn_about: "Maktab bilan tanishing",
+      hero_feat1_title: "Dushanba – Shanba",
+      hero_feat1_desc: "Darslar soat 09:00 da boshlanadi",
+      hero_feat2_title: "3 mahal issiq taom",
+      hero_feat2_desc: "Dietolog nazoratida",
+      hero_feat3_title: "100% xavfsiz kampus",
+      hero_feat3_desc: "24/7 qo'riqlash xizmati",
+      stat_students: "Baxtli o'quvchilar",
+      stat_olympiad: "Xalqaro olimpiada g'oliblari",
+      stat_teachers: "Tajribali ustozlar",
+      stat_university: "OTMga grant bilan kirish",
+      features_badge: "Nega aynan IBRAT SCHOOL?",
+      features_title: "Farzandingiz uchun mukammal ta'lim va tarbiya",
+      features_desc: "Har bir o'quvchining ichki iqtidorini ro'yobga chiqarish va ularni jahon miqyosida raqobatbardosh qilib voyaga yetkazish bizning asosiy burchimizdir.",
+      feat_math_title: "Chuqurlashtirilgan Matematika",
+      feat_math_desc: "Singapur metodikasi, mantiqiy masalalar va xalqaro olimpiadalarga individual tayyorgarlik kursi.",
+      feat_english_title: "Ingliz tili (Cambridge & IELTS)",
+      feat_english_desc: "Xorijiy ustozlar (Native speakers) darslari va yuqori IELTS natijalari.",
+      feat_it_title: "IT, Dasturlash va AI",
+      feat_it_desc: "Python dasturlash tili, kompyuter savodxonligi, veb-dasturlash va sun'iy intellekt vositalari.",
+      feat_sport_title: "Sport va Salomatlik",
+      feat_sport_desc: "Yopiq suzish havzasi, futbol maydoni, shaxmat maktabi va har kuni tibbiy ko'rik.",
+      uni_badge: "Bizning faxrimiz",
+      uni_title: "Bitiruvchilarimiz qabul qilingan universitetlar",
+      news_badge: "Maktab hayoti",
+      news_title: "So'nggi yangiliklar va e'lonlar",
+      news_desc: "IBRAT SCHOOL jamoasining erishgan yutuqlari va maktabdagi yangiliklar.",
+      reviews_badge: "Ota-onalar fikri",
+      reviews_title: "Ota-onalar IBRAT SCHOOL haqida nima deydi?",
+      reviews_desc: "Eng katta mukofotimiz — farzandlar quvonchi va ota-onalar ishonchi.",
+      cta_badge: "Qabul 2026–2027",
+      cta_title: "Farzandingiz kelajagiga bugun to'g'ri poydevor qo'ying",
+      cta_desc: "Onlayn ariza qoldiring yoki bizga qo'ng'iroq qiling: +998 (94) 702-44-56",
+      cta_btn_apply: "Onlayn ariza topshirish",
+      cta_btn_telegram: "Telegram kanalimiz",
+      footer_about_text: "Har bir o'quvchining ichki salohiyatini ochishga va ularni dunyo miqyosidagi yuksak marralarga tayyorlashga mo'ljallangan zamonaviy maktab.",
+      footer_links_title: "Tezkor havolalar",
+      footer_programs_title: "Ta'lim dasturlari",
+      footer_contact_title: "Bog'lanish",
+      modal_title: "IBRAT SCHOOL — Qabul arizasi",
+      modal_btn_submit: "Arizani yuborish",
+      success_title: "Rahmat, arizangiz qabul qilindi!",
+      success_desc: "Sizning ma'lumotlaringiz IBRAT SCHOOL qabul komissiyasiga yetib bordi. Tez orada mutaxassisimiz +998 (94) 702-44-56 orqali siz bilan bog'lanadi.",
+      ai_greeting: "Assalomu alaykum! Men IBRAT SCHOOL sun'iy intellekt maslahatchisiman. Sizga qanday yordam bera olaman?"
+    },
+    ru: {
+      top_schedule: "Понедельник – Суббота: 09:00 – 18:00 (Уроки начинаются в 09:00)",
+      top_address: "г. Янгиер, ул. Лойихачилар, дом 2",
+      nav_home: "Главная",
+      nav_about: "О школе",
+      nav_admissions: "Приём",
+      nav_programs: "Программы",
+      nav_news: "Новости",
+      nav_contact: "Контакты",
+      btn_admission: "Приём открыт",
+      hero_badge: "Открыт приём на 2026–2027 учебный год!",
+      hero_title: "IBRAT SCHOOL — Воспитываем лидеров будущего",
+      hero_desc: "Качественное академическое образование с понедельника по субботу для 1–11 классов: углубленная математика, международный английский Cambridge, IT и духовно-нравственное воспитание.",
+      hero_btn_apply: "Подать заявку",
+      hero_btn_about: "Узнать о школе",
+      hero_feat1_title: "Понедельник – Суббота",
+      hero_feat1_desc: "Уроки начинаются в 09:00",
+      hero_feat2_title: "3-разовое горячее питание",
+      hero_feat2_desc: "Под контролем диетолога",
+      hero_feat3_title: "100% безопасный кампус",
+      hero_feat3_desc: "Круглосуточная охрана 24/7",
+      stat_students: "Счастливых учеников",
+      stat_olympiad: "Победителей олимпиад",
+      stat_teachers: "Опытных педагогов",
+      stat_university: "Поступление на грант",
+      features_badge: "Почему именно IBRAT SCHOOL?",
+      features_title: "Идеальная среда обучения и воспитания",
+      features_desc: "Наша главная задача — раскрыть таланты каждого ребенка и подготовить его к успеху на международном уровне.",
+      feat_math_title: "Углубленная Математика",
+      feat_math_desc: "Сингапурская методика, логические задачи и индивидуальная подготовка к олимпиадам.",
+      feat_english_title: "Английский (Cambridge & IELTS)",
+      feat_english_desc: "Уроки с носителями языка (Native speakers) и высокие баллы на экзаменах IELTS.",
+      feat_it_title: "IT, Программирование и ИИ",
+      feat_it_desc: "Язык Python, компьютерная грамотность, веб-разработка и инструменты искусственного интеллекта.",
+      feat_sport_title: "Спорт и Здоровье",
+      feat_sport_desc: "Крытый бассейн, футбольное поле, шахматная школа и ежедневный медицинский осмотр.",
+      uni_badge: "Наша гордость",
+      uni_title: "Университеты, куда поступили выпускники",
+      news_badge: "Школьная жизнь",
+      news_title: "Свежие новости и объявления",
+      news_desc: "Достижения команды IBRAT SCHOOL и ключевые события нашей школы.",
+      reviews_badge: "Отзывы родителей",
+      reviews_title: "Что говорят родители об IBRAT SCHOOL?",
+      reviews_desc: "Наша лучшая награда — счастливые дети и благодарные родители.",
+      cta_badge: "Приём 2026–2027",
+      cta_title: "Заложите надежный фундамент будущего вашего ребенка",
+      cta_desc: "Оставьте онлайн-заявку или позвоните нам: +998 (94) 702-44-56",
+      cta_btn_apply: "Подать онлайн-заявку",
+      cta_btn_telegram: "Наш Telegram-канал",
+      footer_about_text: "Современная школа, созданная для раскрытия потенциала каждого ученика и подготовки к высоким мировым достижениям.",
+      footer_links_title: "Быстрые ссылки",
+      footer_programs_title: "Программы обучения",
+      footer_contact_title: "Контакты",
+      modal_title: "IBRAT SCHOOL — Заявка на приём",
+      modal_btn_submit: "Отправить заявку",
+      success_title: "Спасибо, ваша заявка принята!",
+      success_desc: "Ваши данные поступили в приёмную комиссию IBRAT SCHOOL. Наш специалист свяжется с вами по номеру +998 (94) 702-44-56.",
+      ai_greeting: "Здравствуйте! Я ИИ-консультант IBRAT SCHOOL. Чем я могу вам помочь?"
+    },
+    en: {
+      top_schedule: "Monday – Saturday: 09:00 – 18:00 (Lessons start at 09:00)",
+      top_address: "Yangiyer city, Loyihachilar str. 2",
+      nav_home: "Home",
+      nav_about: "About Us",
+      nav_admissions: "Admissions",
+      nav_programs: "Programs",
+      nav_news: "News",
+      nav_contact: "Contact",
+      btn_admission: "Admissions Open",
+      hero_badge: "Admissions open for 2026–2027 academic year!",
+      hero_title: "IBRAT SCHOOL — Nurturing Future Leaders",
+      hero_desc: "High-quality academic education Monday through Saturday for grades 1–11: advanced mathematics, Cambridge English, IT, and strong moral character building.",
+      hero_btn_apply: "Apply for Admission",
+      hero_btn_about: "Learn About School",
+      hero_feat1_title: "Monday – Saturday",
+      hero_feat1_desc: "Classes start at 09:00 AM",
+      hero_feat2_title: "3 Healthy Meals Daily",
+      hero_feat2_desc: "Monitored by dietitians",
+      hero_feat3_title: "100% Secure Campus",
+      hero_feat3_desc: "24/7 Security Service",
+      stat_students: "Happy Students",
+      stat_olympiad: "Olympiad Champions",
+      stat_teachers: "Experienced Faculty",
+      stat_university: "University Scholarships",
+      features_badge: "Why Choose IBRAT SCHOOL?",
+      features_title: "The Perfect Environment for Growth and Learning",
+      features_desc: "Our mission is to unleash every student's innate potential and prepare them to compete and lead globally.",
+      feat_math_title: "Advanced Mathematics",
+      feat_math_desc: "Singapore math methods, logic puzzles, and personalized training for Olympiads.",
+      feat_english_title: "Cambridge English & IELTS",
+      feat_english_desc: "Taught by Native speakers with proven high IELTS exam outcomes.",
+      feat_it_title: "IT, Programming & AI",
+      feat_it_desc: "Python coding, computer literacy, modern web skills, and AI tools.",
+      feat_sport_title: "Sports & Wellness",
+      feat_sport_desc: "Indoor swimming pool, football pitch, chess club, and daily medical checks.",
+      uni_badge: "Our Pride",
+      uni_title: "Top Universities Our Graduates Entered",
+      news_badge: "School Life",
+      news_title: "Latest News & Events",
+      news_desc: "Key achievements and updates from the IBRAT SCHOOL community.",
+      reviews_badge: "Parent Testimonials",
+      reviews_title: "What Parents Say About IBRAT SCHOOL",
+      reviews_desc: "Our greatest reward is happy students and trusting families.",
+      cta_badge: "Admissions 2026–2027",
+      cta_title: "Build a Strong Foundation for Your Child's Future",
+      cta_desc: "Submit an online application or call us directly: +998 (94) 702-44-56",
+      cta_btn_apply: "Apply Online Now",
+      cta_btn_telegram: "Join Telegram Channel",
+      footer_about_text: "A modern private school designed to unlock every student's potential and guide them toward global excellence.",
+      footer_links_title: "Quick Links",
+      footer_programs_title: "Academic Programs",
+      footer_contact_title: "Get in Touch",
+      modal_title: "IBRAT SCHOOL — Admission Application",
+      modal_btn_submit: "Submit Application",
+      success_title: "Thank You, Your Application Has Been Received!",
+      success_desc: "Your details have reached the IBRAT SCHOOL admissions office. Our team will contact you shortly at +998 (94) 702-44-56.",
+      ai_greeting: "Hello! I am the IBRAT SCHOOL AI Assistant. How can I assist you today?"
+    }
+  };
+
+  // Tilni almashtirish funksiyasi
+  function setLanguage(lang) {
+    if (!translations[lang]) lang = 'uz';
+    localStorage.setItem('ibrat_site_lang', lang);
+
+    // Barcha tugmalardagi active sinfni yangilash
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+
+    // Barcha [data-i18n] elementlarni tarjima qilish
+    const elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (translations[lang][key]) {
+        el.innerHTML = translations[lang][key];
+      }
+    });
+
+    // Placeholderlar bo'lsa
+    document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+      const key = el.getAttribute('data-i18n-ph');
+      if (translations[lang][key]) {
+        el.setAttribute('placeholder', translations[lang][key]);
+      }
+    });
+  }
+
+  // Saqlangan tilni yuklash
+  const savedLang = localStorage.getItem('ibrat_site_lang') || 'uz';
+  setLanguage(savedLang);
+
+  // Til tugmalari bosilganda
+  const langButtons = document.querySelectorAll('.lang-btn');
+  langButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const selectedLang = e.currentTarget.getAttribute('data-lang');
+      setLanguage(selectedLang);
+      showToast(selectedLang === 'uz' ? "Sayt tili: O'zbekcha" : selectedLang === 'ru' ? "Язык сайта: Русский" : "Language: English");
+    });
+  });
+
+  // ==========================================================================
+  // 2. MOBIL MENYU (HAMBURGER)
   // ==========================================================================
   const mobileToggle = document.getElementById('mobileToggle');
   const navMenu = document.getElementById('navMenu');
@@ -28,9 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Menyu havolasi bosilganda mobil menyuni avtomatik yopish
-    const navLinks = navMenu.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
+    navMenu.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('open');
         const icon = mobileToggle.querySelector('i');
@@ -43,22 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // 2. TIL ALMASHTIRGICH (UZ / RU / EN)
-  // ==========================================================================
-  const langButtons = document.querySelectorAll('.lang-btn');
-  langButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      langButtons.forEach(b => b.classList.remove('active'));
-      e.target.classList.add('active');
-      const selectedLang = e.target.getAttribute('data-lang');
-      
-      // Haqiqiy loyihada bu yerda i18n kutubxonasi yoki alohida sahifalarga yo'naltirish bo'ladi
-      showToast(`Sayt tili: ${selectedLang.toUpperCase()} ga almashtirildi`);
-    });
-  });
-
-  // ==========================================================================
-  // 3. ANIMATSIYALI RAQAMLAR (COUNTER ANIMATION)
+  // 3. ANIMATSIYALI RAQAMLAR (COUNTERS)
   // ==========================================================================
   const counterElements = document.querySelectorAll('.stat-number');
   let countersAnimated = false;
@@ -66,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const animateCounters = () => {
     counterElements.forEach(counter => {
       const target = +counter.getAttribute('data-target');
-      const duration = 2000; // 2 soniya davomida
+      const duration = 2000;
       const stepTime = 30;
       const totalSteps = duration / stepTime;
       const increment = target / totalSteps;
@@ -95,7 +302,6 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
       }, { threshold: 0.2 });
-
       observer.observe(statsSection);
     } else {
       animateCounters();
@@ -103,7 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // 4. OTA-ONALAR FIKRLARI SLAYDERI (TESTIMONIAL SLIDER)
+  // 4. OTA-ONALAR FIKRLARI SLAYDERI
   // ==========================================================================
   const slides = document.querySelectorAll('.testimonial-slide');
   const prevBtn = document.getElementById('sliderPrev');
@@ -113,7 +319,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let sliderInterval = null;
 
   if (slides.length > 0) {
-    // Nuqtalarni (dots) dinamik yaratish
     if (dotsContainer) {
       dotsContainer.innerHTML = '';
       slides.forEach((_, idx) => {
@@ -172,7 +377,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // 5. O'QUV DASTURLARI TABLARI (PROGRAMS TABS)
+  // 5. O'QUV DASTURLARI TABLARI
   // ==========================================================================
   const tabButtons = document.querySelectorAll('.tab-btn');
   const tabPanes = document.querySelectorAll('.tab-pane');
@@ -181,7 +386,6 @@ document.addEventListener('DOMContentLoaded', () => {
     tabButtons.forEach(button => {
       button.addEventListener('click', () => {
         const targetTab = button.getAttribute('data-tab');
-
         tabButtons.forEach(btn => btn.classList.remove('active'));
         tabPanes.forEach(pane => pane.classList.remove('active'));
 
@@ -193,17 +397,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // 6. FAQ AKORDEONI (ACCORDION)
+  // 6. FAQ AKORDEONI
   // ==========================================================================
   const accordionHeaders = document.querySelectorAll('.accordion-header');
-
   accordionHeaders.forEach(header => {
     header.addEventListener('click', () => {
       const item = header.parentElement;
       const body = item.querySelector('.accordion-body');
       const isActive = item.classList.contains('active');
 
-      // Agar bittasini ochganda qolganini yopish kerak bo'lsa:
       document.querySelectorAll('.accordion-item').forEach(otherItem => {
         if (otherItem !== item) {
           otherItem.classList.remove('active');
@@ -223,7 +425,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================================================
-  // 7. GALEREYA FILTRI VA LIGHTBOX MODAL
+  // 7. GALEREYA FILTRI VA LIGHTBOX
   // ==========================================================================
   const filterBtns = document.querySelectorAll('.filter-btn');
   const galleryItems = document.querySelectorAll('.gallery-item');
@@ -236,7 +438,6 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.addEventListener('click', () => {
         filterBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-
         const filter = btn.getAttribute('data-filter');
 
         galleryItems.forEach(item => {
@@ -250,7 +451,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Lightboxda ochish
   if (galleryItems.length > 0 && lightbox && lightboxImg) {
     galleryItems.forEach(item => {
       item.addEventListener('click', () => {
@@ -276,7 +476,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // 8. TEZKOR QABUL MODALI (GLOBAL ADMISSION MODAL)
+  // 8. TEZKOR QABUL MODALI
   // ==========================================================================
   const quickAdmissionBtns = document.querySelectorAll('.open-admission-modal');
   const quickAdmissionModal = document.getElementById('admissionModal');
@@ -301,7 +501,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Modal tashqarisiga bosilganda yopish
   window.addEventListener('click', (e) => {
     if (e.target.classList.contains('modal-overlay')) {
       e.target.classList.remove('active');
@@ -309,16 +508,15 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================================================
-  // 9. FORMALARNI YUBORISH VA MINNATDORCHILIK MODALI
+  // 9. FORMALARNI YUBORISH
   // ==========================================================================
   const successModal = document.getElementById('successModal');
   const forms = document.querySelectorAll('form.ajax-form, #admissionForm, #contactForm, #quickAdmissionForm');
 
   forms.forEach(form => {
     form.addEventListener('submit', (e) => {
-      e.preventDefault(); // Sahifaning qayta yuklanishini to'xtatish
+      e.preventDefault();
 
-      // Oddiy maydonlarni tekshirish (Validation)
       let isValid = true;
       const requiredInputs = form.querySelectorAll('[required]');
       requiredInputs.forEach(input => {
@@ -335,19 +533,16 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Agar ochiq modal bo'lsa (masalan tezkor ariza modali), uni yopamiz
       if (quickAdmissionModal) {
         quickAdmissionModal.classList.remove('active');
       }
 
-      // Muvaffaqiyatli xabarni ko'rsatish
       if (successModal) {
         successModal.classList.add('active');
       } else {
-        alert("Rahmat! Arizangiz muvaffaqiyatli qabul qilindi. Tez orada siz bilan bog'lanamiz.");
+        alert("Rahmat! Arizangiz qabul qilindi. Tez orada siz bilan bog'lanamiz.");
       }
 
-      // Formani tozalash
       form.reset();
     });
   });
@@ -356,7 +551,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // 10. TEPAGA QAYTISH TUGMASI (BACK TO TOP)
   // ==========================================================================
   const backToTopBtn = document.getElementById('backToTop');
-
   if (backToTopBtn) {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 400) {
@@ -367,10 +561,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     backToTopBtn.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 
@@ -384,7 +575,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const aiInput = document.getElementById('aiInput');
   const aiMessages = document.getElementById('aiMessages');
 
-  // AI Chatni ochish / yopish
   if (aiChatBtn && aiChatWindow) {
     aiChatBtn.addEventListener('click', () => {
       aiChatWindow.classList.toggle('active');
@@ -400,7 +590,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Tezkor savollar tugmalari (Quick Buttons)
   document.addEventListener('click', (e) => {
     if (e.target.classList.contains('ai-quick-btn')) {
       const question = e.target.getAttribute('data-question') || e.target.textContent;
@@ -408,7 +597,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Forma orqali xabar yuborish
   if (aiChatForm && aiInput && aiMessages) {
     aiChatForm.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -420,11 +608,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Xabarni qabul qilish va AI javobini ishlab chiqish
   function handleUserMessage(userText) {
     appendMessage(userText, 'user');
-
-    // AI "yozmoqda..." animatsiyasini ko'rsatish
     const typingIndicator = showTypingIndicator();
 
     setTimeout(() => {
@@ -433,13 +618,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       const aiReply = generateAiResponse(userText);
       appendMessage(aiReply, 'bot');
-    }, 700 + Math.random() * 500);
+    }, 600 + Math.random() * 400);
   }
 
-  // Xabarni chatga qo'shish
   function appendMessage(text, sender) {
     if (!aiMessages) return;
-
     const msgDiv = document.createElement('div');
     msgDiv.classList.add('ai-message', sender === 'user' ? 'ai-msg-user' : 'ai-msg-bot');
 
@@ -455,10 +638,8 @@ document.addEventListener('DOMContentLoaded', () => {
     aiMessages.scrollTop = aiMessages.scrollHeight;
   }
 
-  // Yozish animatsiyasi
   function showTypingIndicator() {
     if (!aiMessages) return null;
-
     const typingDiv = document.createElement('div');
     typingDiv.classList.add('ai-typing');
     typingDiv.innerHTML = `
@@ -471,22 +652,23 @@ document.addEventListener('DOMContentLoaded', () => {
     return typingDiv;
   }
 
-  // AI javoblar bazasi va kalit so'zlar tahlili
+  // AI javoblar bazasi (Darslar 09:00 da, Yangiyer manzili, narxlar yo'q, robototexnika yo'q)
   function generateAiResponse(query) {
     const q = query.toLowerCase();
 
-    // 1. O'qish kunlari va jadval
-    if (q.includes('kun') || q.includes('shanba') || q.includes('vaqt') || q.includes('jadval') || q.includes('dushanba')) {
+    // 1. O'qish kunlari va soati
+    if (q.includes('kun') || q.includes('shanba') || q.includes('vaqt') || q.includes('jadval') || q.includes('dushanba') || q.includes('soat') || q.includes('9')) {
       return `📅 <b>IBRAT SCHOOL o'quv tartibi:</b><br>
       • Darslar: <b>Dushanbadan Shanbagacha (haftada 6 kun)</b><br>
-      • Soat: <b>08:00 dan 18:00 gacha</b><br>
-      • Kun tartibi o'z ichiga oladi: asosiy fanlar, 3 mahal toza issiq ovqat, uy vazifalarini to'liq maktabda bajarish hamda sport va ijodiy to'garaklar!`;
+      • Darslar boshlanish vaqti: <b>soat 09:00 da</b><br>
+      • Darslar yakuni: <b>soat 18:00 gacha</b><br>
+      • Kun tartibiga kiritilgan: asosiy fanlar, 3 mahal to'yimli issiq taom, darsdan keyingi mustaqil vazifalar va sport to'garaklari!`;
     }
 
     // 2. Qabul va ro'yxatdan o'tish
     if (q.includes('qabul') || q.includes('ariza') || q.includes('hujjat') || q.includes('imtihon') || q.includes('kirish') || q.includes('topshir')) {
       return `🎓 <b>IBRAT SCHOOL 2026–2027 o'quv yili uchun qabul ochiq!</b><br><br>
-      1–11-sinflar uchun qabul 4 bosqichda bo'ladi:<br>
+      1–11-sinflar uchun qabul bosqichlari:<br>
       1️⃣ Onlayn ariza qoldirish<br>
       2️⃣ Matematika va ingliz tilidan bilim sinovi hamda suhbat<br>
       3️⃣ Hujjatlarni topshirish<br>
@@ -496,46 +678,41 @@ document.addEventListener('DOMContentLoaded', () => {
       </button>`;
     }
 
-    // 3. Narxlar va to'lov
-    if (q.includes('narx') || q.includes('pul') || q.includes('to\'lov') || q.includes('tolov') || q.includes('qancha') || q.includes('kontrakt')) {
-      return `💰 <b>Ta'lim narxlari (oylik):</b><br>
-      • <b>1–4-sinflar (Boshlang'ich):</b> 3 200 000 so'm<br>
-      • <b>5–9-sinflar (O'rta):</b> 3 600 000 so'm<br>
-      • <b>10–11-sinflar (Yuqori):</b> 3 900 000 so'm<br><br>
-      <i>To'lov ichiga: 3 mahal issiq taom, Cambridge darsliklari, to'garaklar, tibbiy nazorat to'liq kiritilgan!</i>`;
+    // 3. To'lov / imtiyozlar haqida
+    if (q.includes('narx') || q.includes('pul') || q.includes('to\'lov') || q.includes('tolov') || q.includes('qancha') || q.includes('kontrakt') || q.includes('sharoit')) {
+      return `ℹ️ <b>O'qish shartlari va qulayliklar:</b><br>
+      Maktabimizda o'quvchilar uchun 3 mahal sifatli issiq taom, darsliklar, uy vazifalarini maktabda bajarish, suzish, futbol va shaxmat mashg'ulotlari to'liq ta'minlangan.<br><br>
+      <i>To'lov shartlari va chegirmalar bo'yicha batafsil ma'lumot olish uchun qabul komissiyamizga qo'ng'iroq qiling:</i> <b>+998 (94) 702-44-56</b>`;
     }
 
     // 4. Aloqa, telefon va manzil
-    if (q.includes('telefon') || q.includes('nomer') || q.includes('aloqa') || q.includes('manzil') || q.includes('telegram') || q.includes('instagram') || q.includes('qayerda')) {
+    if (q.includes('telefon') || q.includes('nomer') || q.includes('aloqa') || q.includes('manzil') || q.includes('telegram') || q.includes('instagram') || q.includes('qayerda') || q.includes('yangiyer')) {
       return `📞 <b>Bog'lanish ma'lumotlari:</b><br>
       • <b>Telefon:</b> +998 (94) 702-44-56<br>
+      • <b>Manzil:</b> Yangiyer sh., Loyihachilar ko'chasi 2-uy<br>
       • <b>Telegram:</b> <a href="https://t.me/ibrat_schools" target="_blank" style="color: #0284c7; text-decoration: underline;">@ibrat_schools</a><br>
-      • <b>Instagram:</b> <a href="https://instagram.com/ibrat_schooll" target="_blank" style="color: #0284c7; text-decoration: underline;">@ibrat_schooll</a><br>
-      • <b>Manzil:</b> Yangiyer sh., Loyihachilar ko'chasi 2-uy.`;
+      • <b>Instagram:</b> <a href="https://instagram.com/ibrat_schooll" target="_blank" style="color: #0284c7; text-decoration: underline;">@ibrat_schooll</a>`;
     }
 
     // 5. Chuqurlashtirilgan fanlar va to'garaklar
-    if (q.includes('fan') || q.includes('ingliz') || q.includes('matematika') || q.includes('robot') || q.includes('to\'garak') || q.includes('togarak') || q.includes('sport')) {
+    if (q.includes('fan') || q.includes('ingliz') || q.includes('matematika') || q.includes('it') || q.includes('to\'garak') || q.includes('togarak') || q.includes('sport')) {
       return `📚 <b>Chuqurlashtirilgan fanlar:</b><br>
-      • Matematika va mantiq<br>
+      • Matematika va mantiqiy fikrlash<br>
       • Cambridge English (Native speakers, IELTS tayyorgarlik)<br>
-      • IT, Sun'iy intellekt va Robototexnika<br>
+      • IT va Zamonaviy Dasturlash (Python, kompyuter savodxonligi)<br>
       • STEM amaliy laboratoriyalari<br><br>
-      ⚽ <b>To'garaklar:</b> Shaxmat, yopiq havzada suzish, futbol, tasviriy san'at, teatr va notiqlik klubi.`;
+      ⚽ <b>To'garaklar:</b> Shaxmat akademiyasi, yopiq havzada suzish, futbol, tasviriy san'at va notiqlik klubi.`;
     }
 
     // 6. Salomlashish
     if (q.includes('salom') || q.includes('assalom') || q.includes('privet') || q.includes('hello')) {
-      return `Assalomu alaykum! <b>IBRAT SCHOOL</b> xususiy maktabining sun'iy intellekt maslahatchisi xizmatingizda! Sizni qabul, o'qish narxlari yoki darslar bo'yicha qanday ma'lumot qiziqtiradi?`;
+      return `Assalomu alaykum! <b>IBRAT SCHOOL</b> xususiy maktabining sun'iy intellekt maslahatchisi xizmatingizda! Darslarimiz soat 09:00 da boshlanadi. Sizga qanday yordam bera olaman?`;
     }
 
-    // Umumiy / standart javob
-    return `Savolingiz uchun tashakkur! <b>IBRAT SCHOOL</b> — bu 1–11-sinflar uchun dushanbadan shanbagacha sifatli ta'lim beruvchi zamonaviy maktab. Batafsil ma'lumot olish yoki qabulga yozilish uchun qo'ng'iroq qiling: <b>+998 (94) 702-44-56</b> yoki Telegram: <b>@ibrat_schools</b>`;
+    return `Savolingiz uchun tashakkur! <b>IBRAT SCHOOL</b> — 1–11-sinflar uchun dushanbadan shanbagacha (darslar 09:00 dan) sifatli ta'lim beruvchi zamonaviy maktab. Qo'shimcha ma'lumot: <b>+998 (94) 702-44-56</b> yoki Telegram: <b>@ibrat_schools</b>`;
   }
 
-  // ==========================================================================
-  // TOAST BILDIRISHNOMA FUNKSIYASI (Yordamchi)
-  // ==========================================================================
+  // Toast bildirishnoma
   function showToast(message) {
     let toast = document.getElementById('siteToast');
     if (!toast) {
@@ -564,7 +741,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       toast.style.opacity = '0';
       setTimeout(() => { toast.style.display = 'none'; }, 300);
-    }, 3000);
+    }, 2500);
   }
 
 });
