@@ -17,21 +17,35 @@ Ushbu loyiha **IBRAT SCHOOL** xususiy maktabi uchun maxsus yaratilgan zamonaviy,
 
 ---
 
-## 👨‍🏫 Pedagogik jamoa va Koordinatorlar
+## 👨‍🏫 Pedagogik jamoa va Koordinatorlar (25 nafar)
 
-Maktabimizning rasmiy pedagogik jamoasi va haqiqiy fotosuratlari saytga to'liq kiritilgan:
+Maktabimizning rasmiy pedagogik jamoasi va haqiqiy fotosuratlari saytga to'liq kiritilgan hamda toifalar bo'yicha saralash (filtr) bilan ta'minlangan:
 
 1. **Sardorbek Quvvatov** — Maktabimizning bosh koordinatori (`images/teachers/sardorbek-quvvatov.jpg`)
-2. **Maftuna Rahmonova** — Maktabimizning 0-sinf o'qituvchisi (`images/teachers/maftuna-rahmonova.jpg`)
-3. **Zulxumor Djurayeva** — Maktabimizning 1-sinf oʻqituvchisi (`images/teachers/zulxumor-djurayeva.jpg`)
-4. **Shahnoza Shamsiddinova** — Maktabimizning 2-sinf oʻqituvchisi (`images/teachers/shahnoza-shamsiddinova.jpg`)
-5. **Zuhra Bektemirova** — Maktabimizning 3-sinf o'qituvchisi (`images/teachers/zuhra-bektemirova.jpg`)
-6. **Hanifa Rahmatova** — Maktabimizning boshlangʻich sinf oʻqituvchisi (`images/teachers/hanifa-rahmatova.jpg`)
-7. **Umriya Qahhorova** — Maktabimizning boshlangʻich sinflari uchun yordamchi ustozimiz (`images/teachers/umriya-qahhorova.jpg`)
-8. **Najmiddin Bektemirov** — Biologiya fani oʻqituvchisi (`images/teachers/najmiddin-bektemirov.jpg`)
-9. **Shaxriyor Odilov** — Jismoniy tarbiya fani oʻqituvchisi (`images/teachers/shaxriyor-odilov.jpg`)
-10. **Shahzoda Xaripova** — Maktabimiz hamshirasi (`images/teachers/shahzoda-xaripova.jpg`)
-11. **Cambridge English kafedrasi** — Xalqaro sertifikatli ingliz tili ustozlari
+2. **Yoqubjon Qo'ziboyev** — Maktabimizning yigitlar uchun koordinatori (`images/teachers/yoqubjon-qoziboyev.jpg`)
+3. **Sevara Kalonova** — Maktabimizning qizlar uchun koordinatori (`images/teachers/sevara-kalonova.jpg`)
+4. **Maftuna Rahmonova** — Maktabimizning 0-sinf o'qituvchisi (`images/teachers/maftuna-rahmonova.jpg`)
+5. **Zulxumor Djurayeva** — Maktabimizning 1-sinf oʻqituvchisi (`images/teachers/zulxumor-djurayeva.jpg`)
+6. **Shahnoza Shamsiddinova** — Maktabimizning 2-sinf oʻqituvchisi (`images/teachers/shahnoza-shamsiddinova.jpg`)
+7. **Achilova Aybeka** — Maktabimizning 2-"B" sinf ustozi (`images/teachers/achilova-aybeka.jpg`)
+8. **Nilufar Akilova** — Maktabimizning 2-"B" sinf ustozi (`images/teachers/nilufar-akilova.jpg`)
+9. **Zuhra Bektemirova** — Maktabimizning 3-sinf o'qituvchisi (`images/teachers/zuhra-bektemirova.jpg`)
+10. **Durdona Xudoyberdiyeva** — Maktabimizning 4-sinf oʻqituvchisi (`images/teachers/durdona-xudoyberdiyeva.jpg`)
+11. **Nozima Xolqo'ziyeva** — Maktabimizning 4-sinf oʻqituvchisi (`images/teachers/nozima-xolqoziyeva.jpg`)
+12. **Hanifa Rahmatova** — Maktabimizning boshlangʻich sinf oʻqituvchisi (`images/teachers/hanifa-rahmatova.jpg`)
+13. **Umriya Qahhorova** — Maktabimizning boshlangʻich sinflari uchun yordamchi ustozimiz (`images/teachers/umriya-qahhorova.jpg`)
+14. **Jo'rabek O'ktamovich** — Maktabimizning Matematika fani ustozi (`images/teachers/jorabek-oktamovich.jpg`)
+15. **Abbos Maxmudov** — Maktabimizning Fizika fani ustozi (`images/teachers/abbos-maxmudov.jpg`)
+16. **Jahongir Narzullayev** — Maktabimizning Informatika fani oʻqituvchisi (`images/teachers/jahongir-narzullayev.jpg`)
+17. **Najmiddin Bektemirov** — Biologiya fani oʻqituvchisi (`images/teachers/najmiddin-bektemirov.jpg`)
+18. **Fazilat Baxodirxonova** — Maktabimizning Ingliz tili fani oʻqituvchisi (`images/teachers/fazilat-baxodirxonova.jpg`)
+19. **Madinabonu Turayeva** — Maktabimizning Ingliz tili fani ustozi (`images/teachers/madinabonu-turayeva.jpg`)
+20. **Zarifullayeva Nafisa** — Maktabimizning Rus tili fani ustozi (`images/teachers/nafisa-zarifullayeva.jpg`)
+21. **Sohiba Samadova** — Maktabimizning ona tili va adabiyot fani ustozi (`images/teachers/sohiba-samadova.jpg`)
+22. **Abdulaziz Shahobiddinov** — Maktabimizning Tarix fani ustozi (`images/teachers/abdulaziz-shahobiddinov.jpg`)
+23. **Azizbek Sulaymonqulov** — Maktabimizning Tarbiya fani oʻqituvchisi (`images/teachers/azizbek-sulaymonqulov.jpg`)
+24. **Shaxriyor Odilov** — Jismoniy tarbiya fani oʻqituvchisi (`images/teachers/shaxriyor-odilov.jpg`)
+25. **Shahzoda Xaripova** — Maktabimiz hamshirasi (`images/teachers/shahzoda-xaripova.jpg`)
 
 ---
 
@@ -40,8 +54,8 @@ Maktabimizning rasmiy pedagogik jamoasi va haqiqiy fotosuratlari saytga to'liq k
 Saytning pastki o'ng burchagida doimiy ishlovchi **IBRAT AI** intellektual yordamchisi o'rnatilgan:
 - 📅 O'qish kunlari va soatlari (Dushanba – Shanba, darslar 09:00 da boshlanadi)
 - 🎓 0–9-sinflar uchun qabul bosqichlari va ariza topshirish
-- 👨‍🏫 Ustozlar, sinf rahbarlari, koordinator va maktab hamshirasi haqida ma'lumot
-- 📚 Chuqurlashtirilgan fanlar (Matematika, Cambridge English, IT, Biologiya)
+- 👨‍🏫 25 nafar ustozlar, koordinatorlar va tibbiy xodim haqida batafsil ma'lumot
+- 📚 Chuqurlashtirilgan fanlar (Matematika, Fizika, Cambridge English, IT, Biologiya, Ona tili, Tarix)
 - 📞 Telefon (`+998 94 702 44 56`) va manzil (Yangiyer sh., Loyihachilar 2-uy)
 - ✍️ To'g'ridan-to'g'ri qabul arizasi ochish
 
@@ -51,8 +65,8 @@ Saytning pastki o'ng burchagida doimiy ishlovchi **IBRAT AI** intellektual yorda
 
 ```text
 ziyonur-maktab/
-├── index.html          # 1. BOSH SAHIFA (Hero, ustozlar vitrinasi, ota-onalar fikrlari, so'nggi yangiliklar, AI Yordamchi)
-├── about.html          # 2. MAKTAB HAQIDA (Maktab tarixi, filtrlanuvchi ustozlar va koordinatorlar to'liq ro'yxati)
+├── index.html          # 1. BOSH SAHIFA (Hero, 12 ustozlar vitrinasi, sharhlar, so'nggi yangiliklar, AI Yordamchi)
+├── about.html          # 2. MAKTAB HAQIDA (Maktab tarixi, 25 nafar ustoz va koordinatorlar filtrlanuvchi to'liq ro'yxati)
 ├── admissions.html     # 3. QABUL 2026-2027 (0–9-sinflar qabul bosqichlari, imtihon grafigi, onlayn ariza shakli, FAQ)
 ├── programs.html       # 4. TA'LIM DASTURLARI (0-sinf tayyorlov, 1-4-sinflar, 5-9-sinflar tablari, dars jadvali)
 ├── news.html           # 5. YANGILIKLAR VA TADBIRLAR (Yangiliklar ro'yxati, tadbirlar, fotogalereya va Lightbox)
@@ -64,15 +78,30 @@ ziyonur-maktab/
 ├── images/
 │   ├── logo.png        # Shaffof fonli IBRAT SCHOOL rasmiy emblemasi
 │   ├── logo-square.png # Favicon va avatar uchun kvadrat emblema
-│   └── teachers/       # Ustozlar va koordinatorlarning rasmiy fotosuratlari
+│   └── teachers/       # 25 nafar ustoz va xodimlarning rasmiy fotosuratlari
 │       ├── sardorbek-quvvatov.jpg
+│       ├── yoqubjon-qoziboyev.jpg
+│       ├── sevara-kalonova.jpg
 │       ├── maftuna-rahmonova.jpg
 │       ├── zulxumor-djurayeva.jpg
 │       ├── shahnoza-shamsiddinova.jpg
+│       ├── achilova-aybeka.jpg
+│       ├── nilufar-akilova.jpg
 │       ├── zuhra-bektemirova.jpg
+│       ├── durdona-xudoyberdiyeva.jpg
+│       ├── nozima-xolqoziyeva.jpg
 │       ├── hanifa-rahmatova.jpg
 │       ├── umriya-qahhorova.jpg
+│       ├── jorabek-oktamovich.jpg
+│       ├── abbos-maxmudov.jpg
+│       ├── jahongir-narzullayev.jpg
 │       ├── najmiddin-bektemirov.jpg
+│       ├── fazilat-baxodirxonova.jpg
+│       ├── madinabonu-turayeva.jpg
+│       ├── nafisa-zarifullayeva.jpg
+│       ├── sohiba-samadova.jpg
+│       ├── abdulaziz-shahobiddinov.jpg
+│       ├── azizbek-sulaymonqulov.jpg
 │       ├── shaxriyor-odilov.jpg
 │       └── shahzoda-xaripova.jpg
 └── README.md
