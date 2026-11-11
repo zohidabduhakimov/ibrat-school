@@ -502,28 +502,48 @@ document.addEventListener('DOMContentLoaded', () => {
   const quickAdmissionModal = document.getElementById('admissionModal');
   const modalCloseBtns = document.querySelectorAll('.close-modal');
 
+  const openModal = (modal) => {
+    if (!modal) return;
+    modal.classList.add('active');
+    document.body.classList.add('modal-open');
+    const box = modal.querySelector('.modal-box');
+    if (box) box.scrollTop = 0;
+  };
+
+  const closeAllModals = () => {
+    document.querySelectorAll('.modal-overlay').forEach(modal => {
+      modal.classList.remove('active');
+    });
+    document.body.classList.remove('modal-open');
+  };
+
   if (quickAdmissionBtns.length > 0 && quickAdmissionModal) {
     quickAdmissionBtns.forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
-        quickAdmissionModal.classList.add('active');
+        openModal(quickAdmissionModal);
       });
     });
   }
 
   if (modalCloseBtns.length > 0) {
     modalCloseBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.modal-overlay').forEach(modal => {
-          modal.classList.remove('active');
-        });
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        closeAllModals();
       });
     });
   }
 
   window.addEventListener('click', (e) => {
     if (e.target.classList.contains('modal-overlay')) {
-      e.target.classList.remove('active');
+      closeAllModals();
+    }
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeAllModals();
     }
   });
 
@@ -670,8 +690,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       if (successModal) {
-        successModal.classList.add('active');
+        openModal(successModal);
       } else {
+        closeAllModals();
         alert("Rahmat! Arizangiz qabul qilindi va ma'muriyat Telegram botiga yetkazildi. Tez orada siz bilan bog'lanamiz.");
       }
 
