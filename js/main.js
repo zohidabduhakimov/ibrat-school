@@ -532,6 +532,10 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         closeAllModals();
       });
+      btn.addEventListener('touchend', (e) => {
+        e.preventDefault();
+        closeAllModals();
+      }, { passive: false });
     });
   }
 
