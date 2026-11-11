@@ -61,6 +61,19 @@ Saytning pastki o'ng burchagida doimiy ishlovchi **IBRAT AI** intellektual yorda
 
 ---
 
+## 🤖 Telegram Bot Integratsiyasi
+
+Saytdagi barcha ro'yxatdan o'tish arizalari va murojaatlar to'g'ridan-to'g'ri maktab ma'muriyatining Telegram botiga avtomatik yuboriladi:
+- **Bot:** `@ibratschool_receptionbot` (Ibrat School Reception)
+- **Chat ID:** `8767361789`
+- **Integratsiya qilingan bo'limlar:**
+  1. 🎓 **Tezkor onlayn ariza modali** (`#quickAdmissionForm` - barcha sahifalarda)
+  2. 📝 **Qabul 2026–2027 to'liq ariza shakli** (`#admissionForm` - admissions.html)
+  3. ✉️ **Aloqa va murojaatlar shakli** (`#contactForm` - contact.html)
+  4. 🤖 **AI Chatbot maslahatchisi** (foydalanuvchi suhbatda telefon raqamini yozganda ham avtomatik xabar beradi)
+
+---
+
 ## 📁 Loyiha fayllari tuzilishi
 
 ```text

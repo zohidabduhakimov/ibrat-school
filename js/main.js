@@ -528,13 +528,54 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================================================
-  // 9. FORMALARNI YUBORISH
+  // 9. TELEGRAM BOT INTEGRATSIYASI VA FORMALARNI YUBORISH
   // ==========================================================================
+  const TELEGRAM_CONFIG = {
+    token: '9278043820:AAGWMNnAZzRlP9-aDdGSVj7um_g08uDIzuY',
+    chatId: '8767361789'
+  };
+
+  function escapeHtml(text) {
+    if (!text) return '';
+    return text.toString()
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+  }
+
+  async function sendTelegramMessage(text) {
+    const url = `https://api.telegram.org/bot${TELEGRAM_CONFIG.token}/sendMessage`;
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          chat_id: TELEGRAM_CONFIG.chatId,
+          text: text,
+          parse_mode: 'HTML'
+        })
+      });
+      return await response.json();
+    } catch (err) {
+      console.warn('JSON POST orqali yuborishda xatolik, URL fallback sinab ko\'rilmoqda:', err);
+      try {
+        const fallbackUrl = `https://api.telegram.org/bot${TELEGRAM_CONFIG.token}/sendMessage?chat_id=${TELEGRAM_CONFIG.chatId}&text=${encodeURIComponent(text)}&parse_mode=HTML`;
+        const res = await fetch(fallbackUrl);
+        return await res.json();
+      } catch (e) {
+        console.error('Telegram botga yuborish imkoni bo\'lmadi:', e);
+        return { ok: false, error: e };
+      }
+    }
+  }
+
   const successModal = document.getElementById('successModal');
   const forms = document.querySelectorAll('form.ajax-form, #admissionForm, #contactForm, #quickAdmissionForm');
 
   forms.forEach(form => {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       let isValid = true;
@@ -553,6 +594,77 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Yuborilmoqda...';
+      }
+
+      const now = new Date();
+      const timeStr = now.toLocaleDateString('uz-UZ') + ', ' + now.toLocaleTimeString('uz-UZ', { hour: '2-digit', minute: '2-digit' });
+      const pageTitle = document.title ? document.title.split('—')[0].trim() : 'IBRAT SCHOOL';
+
+      let telegramText = '';
+
+      if (form.id === 'contactForm') {
+        const nameInput = form.querySelector('input[type="text"]');
+        const phoneInput = form.querySelector('input[type="tel"]');
+        const messageInput = form.querySelector('textarea');
+
+        const senderName = nameInput ? nameInput.value.trim() : 'Noma\'lum';
+        const senderPhone = phoneInput ? phoneInput.value.trim() : 'Kiritilmagan';
+        const senderMsg = messageInput ? messageInput.value.trim() : 'Xabar matni yo\'q';
+
+        telegramText = `✉️ <b>YANGI MUROJAAT / SAVOL</b>\n` +
+          `━━━━━━━━━━━━━━━━━━\n` +
+          `👤 <b>Ism:</b> ${escapeHtml(senderName)}\n` +
+          `📞 <b>Telefon:</b> ${escapeHtml(senderPhone)}\n` +
+          `💬 <b>Xabar:</b>\n${escapeHtml(senderMsg)}\n` +
+          `━━━━━━━━━━━━━━━━━━\n` +
+          `🌐 <b>Sahifa:</b> ${escapeHtml(pageTitle)}\n` +
+          `⏰ <b>Vaqti:</b> ${timeStr}`;
+      } else {
+        // admissionForm yoki quickAdmissionForm
+        const textInputs = form.querySelectorAll('input[type="text"]');
+        const childName = textInputs[0] ? textInputs[0].value.trim() : 'Kiritilmagan';
+        const dateInput = form.querySelector('input[type="date"]');
+        const birthDate = dateInput ? dateInput.value.trim() : 'Kiritilmagan';
+        const selectElem = form.querySelector('select');
+        let classLevel = 'Tanlanmagan';
+        if (selectElem && selectElem.selectedIndex >= 0) {
+          classLevel = selectElem.options[selectElem.selectedIndex].text;
+        }
+        const parentName = textInputs[1] ? textInputs[1].value.trim() : 'Kiritilmagan';
+        const phoneInput = form.querySelector('input[type="tel"]');
+        const parentPhone = phoneInput ? phoneInput.value.trim() : 'Kiritilmagan';
+        const commentInput = form.querySelector('textarea');
+        const comment = commentInput && commentInput.value.trim() ? commentInput.value.trim() : 'Izoh qoldirilmagan';
+
+        telegramText = `🎓 <b>YANGI QABUL ARIZASI!</b>\n` +
+          `━━━━━━━━━━━━━━━━━━\n` +
+          `👶 <b>Bolaning F.I.SH:</b> ${escapeHtml(childName)}\n` +
+          `📅 <b>Tug'ilgan sanasi:</b> ${escapeHtml(birthDate)}\n` +
+          `🏫 <b>Topshirayotgan sinfi:</b> ${escapeHtml(classLevel)}\n` +
+          `👨‍👩‍👦 <b>Ota-onasining F.I.SH:</b> ${escapeHtml(parentName)}\n` +
+          `📞 <b>Telefon raqam:</b> ${escapeHtml(parentPhone)}\n` +
+          `📝 <b>Qo'shimcha izoh:</b> ${escapeHtml(comment)}\n` +
+          `━━━━━━━━━━━━━━━━━━\n` +
+          `🌐 <b>Sahifa:</b> ${escapeHtml(pageTitle)}\n` +
+          `⏰ <b>Vaqti:</b> ${timeStr}`;
+      }
+
+      try {
+        await sendTelegramMessage(telegramText);
+      } catch (err) {
+        console.error('Telegramga yuborishda xatolik:', err);
+      }
+
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHtml;
+      }
+
       if (quickAdmissionModal) {
         quickAdmissionModal.classList.remove('active');
       }
@@ -560,7 +672,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (successModal) {
         successModal.classList.add('active');
       } else {
-        alert("Rahmat! Arizangiz qabul qilindi. Tez orada siz bilan bog'lanamiz.");
+        alert("Rahmat! Arizangiz qabul qilindi va ma'muriyat Telegram botiga yetkazildi. Tez orada siz bilan bog'lanamiz.");
       }
 
       form.reset();
@@ -631,6 +743,22 @@ document.addEventListener('DOMContentLoaded', () => {
   function handleUserMessage(userText) {
     appendMessage(userText, 'user');
     const typingIndicator = showTypingIndicator();
+
+    // Agar foydalanuvchi chatbotda telefon raqam qoldirsa, Telegram botga bildirishnoma yuborish
+    const digitsOnly = userText.replace(/\D/g, '');
+    if (digitsOnly.length >= 9 && (userText.includes('+998') || userText.includes('998') || digitsOnly.length === 9 || digitsOnly.length === 12)) {
+      const pageTitle = document.title ? document.title.split('—')[0].trim() : 'IBRAT SCHOOL';
+      const now = new Date();
+      const timeStr = now.toLocaleDateString('uz-UZ') + ', ' + now.toLocaleTimeString('uz-UZ', { hour: '2-digit', minute: '2-digit' });
+      const botAlert = `🤖 <b>AI CHATBOTDA TELEFON RAQAM QOLDIRILDI!</b>\n` +
+        `━━━━━━━━━━━━━━━━━━\n` +
+        `📞 <b>Telefon:</b> ${escapeHtml(userText.trim())}\n` +
+        `💬 <b>Mijoz yozgan xabar:</b>\n${escapeHtml(userText)}\n` +
+        `━━━━━━━━━━━━━━━━━━\n` +
+        `🌐 <b>Sahifa:</b> ${escapeHtml(pageTitle)}\n` +
+        `⏰ <b>Vaqti:</b> ${timeStr}`;
+      sendTelegramMessage(botAlert);
+    }
 
     setTimeout(() => {
       if (typingIndicator && typingIndicator.parentNode) {
