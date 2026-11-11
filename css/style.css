@@ -2275,6 +2275,7 @@ body.modal-open {
     min-height: 44px !important;
     font-size: 0.94rem !important;
   }
+}
 
 @media (max-width: 380px) {
   .team-grid {
