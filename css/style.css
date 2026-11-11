@@ -1103,16 +1103,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .team-img-wrap {
   width: 100%;
-  height: 270px;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   position: relative;
-  background-color: #cbd5e1;
+  background-color: #f1f5f9;
 }
 
 .team-img-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
+  display: block;
   transition: transform 0.4s ease;
 }
 
@@ -2005,6 +2007,71 @@ textarea.form-control {
     right: 20px;
     padding: 10px 16px;
     font-size: 0.8rem;
+  }
+  /* Mobilda Ustozlar bo'limi moslashuvchanligi */
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+  .team-card {
+    border-radius: var(--radius-md) !important;
+  }
+  .team-img-wrap {
+    aspect-ratio: 4 / 5 !important;
+    height: auto !important;
+  }
+  .team-info {
+    padding: 12px 8px !important;
+  }
+  .team-class-badge {
+    font-size: 0.68rem !important;
+    padding: 3px 6px !important;
+    margin-bottom: 4px !important;
+    letter-spacing: 0 !important;
+  }
+  .team-name {
+    font-size: 0.95rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 4px !important;
+  }
+  .team-role {
+    font-size: 0.74rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 6px !important;
+    letter-spacing: 0 !important;
+  }
+  .team-exp {
+    font-size: 0.75rem !important;
+    line-height: 1.35 !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .teacher-filters-wrap {
+    display: flex !important;
+    gap: 8px !important;
+    overflow-x: auto !important;
+    padding-bottom: 12px !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    justify-content: flex-start !important;
+  }
+  .teacher-filters-wrap::-webkit-scrollbar {
+    display: none;
+  }
+  .teacher-filter-btn {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    padding: 8px 14px !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .team-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
   }
 }
 
