@@ -1476,13 +1476,26 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-xl);
-  height: 380px;
+  height: 440px;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.tab-image img {
+.tab-image img,
+.program-tab-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top !important; /* Bosh qismi va yuzlar to'liq ko'rinadi, kesilmaydi! */
+  border-radius: var(--radius-lg);
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.tab-image:hover img {
+  transform: scale(1.03);
 }
 
 /* --------------------------------------------------------------------------
@@ -1808,7 +1821,7 @@ body.modal-open {
   line-height: 1.3;
 }
 
-.close-modal {
+.close-modal:not(.btn) {
   width: 40px;
   height: 40px;
   min-width: 40px;
@@ -1830,14 +1843,48 @@ body.modal-open {
   -webkit-tap-highlight-color: transparent;
 }
 
-.close-modal:hover,
-.close-modal:focus,
-.close-modal:active {
+.close-modal:not(.btn):hover,
+.close-modal:not(.btn):focus,
+.close-modal:not(.btn):active {
   background: #fee2e2 !important;
   color: #ef4444 !important;
   border-color: rgba(239, 68, 68, 0.3) !important;
   transform: scale(1.08);
   outline: none;
+}
+
+/* Success modalidagi "Tushunarli, rahmat!" tugmasi */
+.btn-modal-confirm,
+.modal-box .btn.close-modal,
+.modal-box .btn-primary {
+  width: 100% !important;
+  min-height: 48px !important;
+  height: auto !important;
+  border-radius: 12px !important;
+  background-color: var(--accent) !important;
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  padding: 14px 24px !important;
+  border: 1px solid var(--accent) !important;
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.3) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  margin-top: 15px !important;
+  transition: all 0.25s ease !important;
+  text-decoration: none !important;
+}
+
+.btn-modal-confirm:hover,
+.modal-box .btn.close-modal:hover,
+.modal-box .btn-primary:hover {
+  background-color: var(--accent-hover) !important;
+  border-color: var(--accent-hover) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(217, 119, 6, 0.45) !important;
 }
 
 @keyframes modalScale {
@@ -2245,7 +2292,7 @@ body.modal-open {
     font-size: 1.12rem !important;
     line-height: 1.3 !important;
   }
-  .close-modal {
+  .close-modal:not(.btn) {
     width: 40px !important;
     height: 40px !important;
     min-width: 40px !important;
@@ -2256,6 +2303,14 @@ body.modal-open {
     justify-content: center !important;
     flex-shrink: 0 !important;
     touch-action: manipulation !important;
+  }
+  .tab-image {
+    height: 380px !important;
+    margin-top: 15px !important;
+  }
+  .tab-image img,
+  .program-tab-img {
+    object-position: center top !important;
   }
   /* Mobil: 'Barcha 25 nafar o'qituvchi...' sariq tugmasi */
   .teachers-cta-wrap {
@@ -2351,12 +2406,21 @@ body.modal-open {
     font-size: 1.02rem !important;
     line-height: 1.3 !important;
   }
-  .close-modal {
+  .close-modal:not(.btn) {
     width: 38px !important;
     height: 38px !important;
     min-width: 38px !important;
     min-height: 38px !important;
     font-size: 1.15rem !important;
+  }
+  .tab-image {
+    height: 320px !important;
+    border-radius: 14px !important;
+  }
+  .tab-image img,
+  .program-tab-img {
+    object-position: center top !important;
+    border-radius: 14px !important;
   }
   /* Mobil: 'Barcha 25 nafar o'qituvchi...' sariq tugmasi */
   .teachers-cta-wrap {
